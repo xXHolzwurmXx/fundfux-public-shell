@@ -354,53 +354,392 @@ padding:21px;transition:border-color .2s,transform .2s}
 .gta-buttons{grid-template-columns:1fr}
 .gaming-card{padding:20px}
 }
-</style></head><body><a class="skip-link" href="#produkte">Zum Inhalt springen</a>
-<header id="start"><div class="shell"><nav>
-<a class="brand" href="#start"><span aria-hidden="true">🦊</span> FundFux</a>
-<div class="navlinks"><a href="#gaming">Gaming</a><a href="#produkte">Produkte entdecken</a><a href="#ratgeber-uebersicht">Kaufhilfen</a><a href="#kontakt">Kontakt</a><a href="#impressum">Impressum</a><a href="#datenschutz">Datenschutz</a></div>
+
+/* Pixel-accurate desktop reference: source from the user's approved FundFux mockup. */
+.ff-exact *{box-sizing:border-box}
+body.ff-original{background:#02121a}
+.ff-exact{max-width:1672px;margin:0 auto;position:relative;z-index:3;line-height:1}
+.ff-exact img.ff-full{display:block;width:100%;height:auto;aspect-ratio:1672/941}
+.ff-exact .ff-hit{position:absolute;z-index:4;border:1px solid transparent;border-radius:12px;cursor:pointer;text-decoration:none}
+.ff-exact .ff-hit:hover{background:rgba(3,241,255,.09);border-color:rgba(6,246,255,.6);box-shadow:inset 0 0 17px #18e6fd54,0 0 12px #00e3ff4b}
+.ff-exact .ff-hit:focus-visible{outline:4px solid #ffe06d;outline-offset:3px;box-shadow:0 0 25px #00ffff}
+.ff-sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.ff-mobile-site{display:none}
+.ff-image-credit{max-width:1500px;margin:0 auto;color:#abc6d2;padding:9px 28px 4px;font-size:11px;line-height:1.5;text-align:center}
+.ff-legal-links{display:flex;gap:17px;justify-content:center;padding:3px 6px 16px;font-size:12px}
+.ff-legal-links a{color:#83eef7}
+.ff-gaming-details{margin-top:12px}
+.ff-gaming-details summary{cursor:pointer;padding:14px 21px;color:#9cfcff;font-weight:800;background:#0d2139;border:1px solid #238eae;border-radius:10px}
+.ff-gaming-details .gaming-section{display:block;margin-top:13px}
+.ff-page-link{display:flex;justify-content:center;align-items:center;gap:12px;margin:22px auto;padding:14px;border:1px solid #fa9e34;border-radius:12px;background:#09283b;max-width:770px;color:#d6eef7}
+.ff-page-link a{color:#ffd385;font-weight:900}
+.ff-mobile-site a:focus-visible{outline:3px solid #ffdb6a;outline-offset:3px}
+@media(min-width:801px){body.ff-original .ff-mobile-site{display:none}}
+@media(max-width:800px){
+ .ff-exact,.ff-image-credit{display:none!important}
+ .ff-mobile-site{display:block;color:#fff;background:radial-gradient(ellipse at 70% 5%,#16345d 0%,#071727 43%,#031019 100%);font-family:Inter,"Segoe UI",system-ui,sans-serif;line-height:1.45;width:100%;min-width:0;overflow:hidden}
+ body.ff-original .ff-legal-links{display:none}
+ .ff-mobile-site .ff-mob-nav{display:flex!important;flex-flow:row nowrap!important;overflow-x:auto!important;white-space:nowrap;align-items:center;max-width:100%;min-height:62px}
+ .ff-mobile-site .ff-mob-nav a{display:inline-flex!important;flex:0 0 auto!important;justify-content:center}
+ .ff-mobile-site .ff-mob-hero h1{font-size:clamp(31px,8vw,42px)!important;max-width:100%;overflow-wrap:break-word}
+ .ff-mobile-site .ff-mob-hero h1 strong{display:block}
+ .ff-mobile-site .ff-mob-bar span{font-size:10px;white-space:nowrap}
+ .ff-mob-bar{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid #04e6e97a;gap:12px;background:#031622}
+ .ff-mob-brand{font-size:25px;font-style:italic;font-weight:1000;letter-spacing:-.06em;text-decoration:none;color:#fff}
+ .ff-mob-brand b{color:#ffb14b}
+ .ff-mob-nav{display:flex;gap:6px;overflow-x:auto;padding:9px 12px 12px;background:#071b2c;border-bottom:1px solid #03d6e86b}
+ .ff-mob-nav a{flex-shrink:0;color:#e4faff;text-decoration:none;border:1px solid #237a9d;border-radius:24px;padding:8px 12px;font-size:12px;font-weight:800}
+ .ff-mob-hero{padding:27px 17px 21px}
+ .ff-mob-kicker{letter-spacing:.15em;color:#16f6ff;font-weight:1000;font-size:10px}
+ .ff-mob-hero h1{font-size:clamp(33px,9vw,51px);font-style:italic;font-weight:1000;line-height:1.02;letter-spacing:-.04em;margin:9px 0}
+ .ff-mob-hero h1 em{color:#00e3ee}.ff-mob-hero h1 strong{color:#ffa63a}
+ .ff-mob-hero p{font-size:14px;color:#d4e9ee;margin:15px 0;line-height:1.57}
+ .ff-mob-art{position:relative;padding:8px;border-radius:17px;overflow:hidden;border:1px solid #21e6ef7a;box-shadow:0 0 25px #08cbf04f;margin:17px 0 21px;background:linear-gradient(100deg,#082137,#071322)}
+ .ff-mob-art img{width:100%;height:auto;display:block}
+ .ff-mob-btns{display:flex;gap:10px;flex-wrap:wrap}
+ .ff-mob-btns a,.ff-mob-card a.ff-buy{display:inline-block;padding:12px 14px;text-decoration:none;border-radius:29px;background:linear-gradient(120deg,#ffca30,#ff9c26);color:#072031;font-weight:1000;box-shadow:0 0 16px #ffa72378;font-size:13px}
+ .ff-mob-btns a.ff-blue{background:linear-gradient(135deg,#00d5ff,#007aab);color:#fff}
+ .ff-mob-features{display:grid;gap:9px;margin:13px 16px 23px}
+ .ff-mob-features div{padding:10px 13px;background:#0b2b38;border:1px solid #10bce98c;border-radius:11px;font-size:13px}
+ .ff-mob-features strong{color:#fff}
+ .ff-mob-guides{padding:13px 15px 24px}
+ .ff-mob-guides h2{font-size:31px;font-weight:1000;font-style:italic;letter-spacing:-.04em;margin:8px 0 5px}
+ .ff-mob-guides h2 em{color:#ffaf3c}
+ .ff-mob-guides p{font-size:13px;color:#d2e1ef}
+ .ff-mob-cards{display:grid;gap:13px}
+ .ff-mob-card{position:relative;border-radius:15px;padding:16px 16px 14px;min-height:214px;background:linear-gradient(125deg,#0a2347,#09182e);border:1px solid #2cb6ff;box-shadow:inset 0 0 18px #1c8fff20}
+ .ff-mob-card.green{background:linear-gradient(125deg,#092d39,#071d27);border-color:#11e9bb}
+ .ff-mob-card.pink{background:linear-gradient(125deg,#311c49,#0c1c2b);border-color:#c974e2}
+ .ff-mob-card .ff-mobile-tag{color:#44e5ff;font-size:11px;font-weight:1000;letter-spacing:.09em;text-transform:uppercase}
+ .ff-mob-card.green .ff-mobile-tag{color:#66ffc7}.ff-mob-card.pink .ff-mobile-tag{color:#ffacef}
+ .ff-mob-card h3{font-size:22px;font-weight:1000;line-height:1.1;margin:7px 0 6px;max-width:65%}
+ .ff-mob-card p{font-size:12px;max-width:61%;line-height:1.45;min-height:64px;margin:0 0 12px}
+ .ff-mob-card .ff-mobile-illustration{position:absolute;right:0;top:26px;width:43%;height:123px;object-fit:cover;object-position:center;opacity:.94;filter:drop-shadow(0 0 9px #00e5ff6b)}
+ .ff-mob-card small{font-size:10px;display:block;margin-top:6px;color:#cadfed}
+ .ff-mob-card a.ff-buy{font-size:12px;padding:9px 13px;position:relative}
+ .ff-mob-benefits{display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:10px 14px 27px}
+ .ff-mob-benefits div{border:1px solid #258caa;background:#092634;padding:12px;border-radius:10px;font-size:12px;font-weight:800}
+ .ff-mob-christmas{margin:0 15px 24px;padding:19px;background:linear-gradient(145deg,#2d1530,#102b39);border:1px solid #ff9c56;border-radius:15px}
+ .ff-mob-christmas img{width:100%;height:auto;max-height:160px;object-fit:cover;border-radius:9px;display:block}
+ .ff-mob-christmas h2{margin:14px 0 5px;font-size:24px}
+ .ff-mob-christmas p{color:#f2e6df;font-size:13px}
+ .ff-mob-christmas a{color:#132031;background:#ffb33e;text-decoration:none;padding:11px 16px;border-radius:18px;display:inline-block;font-weight:900;font-size:12px}
+ .ff-mobile-disclaimer{margin:0 16px 20px;padding:12px;font-size:12px;line-height:1.5;border:1px solid #1c9daa;border-radius:10px;color:#d6e9ee;background:#0b2936}
+ body.ff-original main.shell{width:min(93%,840px)}
+}
+
+
+/* ----------------------------------------------
+   FUNDFUX // ONE COHERENT FUTURISTIC DESIGN
+   All content sections, product info, buying guides,
+   contact, footer and legal - retains real site content
+   ---------------------------------------------- */
+body.ff-original {background:
+  radial-gradient(ellipse 780px 560px at 15% 20%,#06304d78,transparent 72%),
+  radial-gradient(ellipse 900px 620px at 90% 45%,#371a644f,transparent 72%),
+  radial-gradient(ellipse 850px 650px at 20% 75%,#07443f3d,transparent 75%),#03111e;
+  color:#f0f9ff}
+body.ff-original .ff-exact #gaming{top:31%;left:0}
+body.ff-original:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+  background-image:linear-gradient(#17cad90c 1px,transparent 1px),linear-gradient(90deg,#17cad90c 1px,transparent 1px);
+  background-size:48px 48px}
+body.ff-original main.shell{max-width:1460px;width:min(94%,1460px);margin:0 auto;padding:2px 0 60px;color:#edf7ff}
+body.ff-original main.shell>.section{position:relative;margin:46px 0;padding:clamp(18px,3vw,34px);border-radius:22px;
+ background:radial-gradient(ellipse at 85% 0%,#095f8138,transparent 42%),linear-gradient(145deg,#091f34e8,#061726ed 63%,#0e1733df);
+ border:1px solid #2288bd70;box-shadow:0 18px 45px #0006,inset 0 1px #b8f9ff1d;overflow:hidden}
+body.ff-original main.shell>.section:before{content:"";pointer-events:none;position:absolute;inset:0 auto auto 0;width:235px;height:2px;
+ background:linear-gradient(90deg,#13eff9,#56a5ff,transparent);box-shadow:0 0 16px #0ce9ff}
+body.ff-original main.shell>.section>.section-topline{color:#22f3ff;font-size:11px;letter-spacing:.2em;
+ font-weight:1000;margin:0 0 8px;text-transform:uppercase}
+body.ff-original main.shell>.section>h2{font-size:clamp(29px,3.7vw,47px);line-height:1.08;
+ font-weight:1000;letter-spacing:-.045em;font-style:italic;color:#f5fcff;margin:12px 0 18px;
+ text-shadow:0 0 25px #24cffb26}
+body.ff-original main.shell>.section>.intro{max-width:920px;margin:0 0 26px;color:#cce1e9;
+ font-size:14px;line-height:1.7}
+body.ff-original .cards{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px;margin:18px 0 16px}
+body.ff-original .p-card{--ff-accent:#23dafa;--ff-glow:#02bcff55;
+ position:relative;display:flex!important;flex-direction:column;align-items:stretch;min-width:0;
+ overflow:hidden;padding:19px!important;border-radius:18px!important;background:
+ radial-gradient(ellipse at 86% 8%,#0d97d54d,transparent 42%),
+ linear-gradient(135deg,#0c2742,#071a30 72%)!important;
+ border:1px solid #349af6bb!important;
+ box-shadow:inset 0 1px #f7ffff19,0 8px 25px #0006,0 0 12px #088bfa20!important;
+ transition:transform .18s,box-shadow .18s,border-color .18s}
+body.ff-original .p-card:nth-child(3n+2){--ff-accent:#19efba;--ff-glow:#00e8aa55;
+ border-color:#21ddb2aa!important;background:radial-gradient(ellipse at 92% 4%,#04a88948,transparent 46%),linear-gradient(130deg,#092e35,#071d2d 72%)!important}
+body.ff-original .p-card:nth-child(3n){--ff-accent:#f27ae4;--ff-glow:#b84bea60;
+ border-color:#ba7aefa8!important;background:radial-gradient(ellipse at 90% 4%,#804cbd48,transparent 46%),linear-gradient(125deg,#201b40,#091a2d 73%)!important}
+body.ff-original .p-card:hover{transform:translateY(-5px);border-color:var(--ff-accent)!important;
+ box-shadow:0 12px 30px #0008,0 0 25px var(--ff-glow)!important}
+body.ff-original .p-card:before{content:"";position:absolute;top:0;left:0;right:0;height:2px;
+ background:linear-gradient(90deg,var(--ff-accent),transparent 84%);box-shadow:0 0 16px var(--ff-accent);
+ opacity:1;pointer-events:none}
+body.ff-original .p-card .ptype{font-weight:1000;color:var(--ff-accent);font-size:10px;
+ text-transform:uppercase;letter-spacing:.1em;line-height:1.6;margin:0 0 10px}
+body.ff-original .p-card h3{font-size:clamp(19px,1.7vw,24px);line-height:1.15;font-style:italic;
+ letter-spacing:-.03em;color:#fff;margin:11px 0 7px;text-shadow:0 0 14px #00d4ff15}
+body.ff-original .p-card p{color:#d4e5f3;line-height:1.55;font-size:12.5px}
+body.ff-original .p-card .small{color:#b7cad7;font-size:11px}
+body.ff-original .p-card>p:not(.small):not(.check){margin:10px 0 13px}
+body.ff-original .p-card .photo-box,
+body.ff-original .p-card .ff-product-visual{position:relative;display:flex;
+ align-items:center;justify-content:center;width:100%;height:212px;min-height:212px;
+ margin:0;border-radius:14px;overflow:hidden;border:1px solid #1dd6ff88;
+ background:radial-gradient(ellipse at 50% 60%,#126aa468,transparent 63%),linear-gradient(150deg,#071b30,#0a2c3f)}
+body.ff-original .p-card:nth-child(3n+2) .photo-box,
+body.ff-original .p-card:nth-child(3n+2) .ff-product-visual{border-color:#3ae5bd9c}
+body.ff-original .p-card:nth-child(3n) .photo-box,
+body.ff-original .p-card:nth-child(3n) .ff-product-visual{border-color:#ca82f1a0}
+body.ff-original .p-card .photo-box:before,body.ff-original .p-card .ff-product-visual:before{
+ content:"";pointer-events:none;position:absolute;left:8%;bottom:9px;width:84%;height:29px;
+ border-radius:50%;border:2px solid var(--ff-accent);transform:perspective(80px) rotateX(58deg);
+ box-shadow:0 0 20px var(--ff-glow),inset 0 0 20px var(--ff-glow);opacity:.75}
+body.ff-original .p-card .photo-box img{position:relative;z-index:1;width:100%;height:154px;max-height:154px;
+ object-fit:contain;object-position:center;filter:drop-shadow(0 4px 11px #000a);background:transparent}
+body.ff-original .p-card .photo-box figcaption{position:absolute;z-index:2;left:8px;right:8px;bottom:3px;
+ font-size:9px;line-height:1.18;color:#ddf2f1;background:rgba(2,15,30,.87);border-radius:6px;
+ padding:4px 6px;max-height:40px;overflow-y:auto}
+body.ff-original .p-card .photo-box figcaption a{color:#aaf8ff}
+body.ff-original .p-card .ff-product-visual:after{content:"Konzeptillustration · kein Produktfoto";z-index:3;
+ position:absolute;left:9px;top:8px;background:#001723c7;padding:5px 8px;
+ font-weight:800;font-size:9px;letter-spacing:.04em;border:1px solid var(--ff-accent);border-radius:14px;color:#d8fcff}
+body.ff-original .ff-product-visual .ff-tech-object{position:relative;z-index:2;transform:translateY(10px);filter:drop-shadow(0 10px 12px #000b)}
+body.ff-original .ff-product-visual.ninja .ff-tech-object{width:160px;height:115px;background:linear-gradient(120deg,#7888a1,#202d3a 20%,#131820 82%,#7c8caa);
+ border:2px solid #8398a7;border-radius:15px 15px 12px 12px;box-shadow:inset 0 8px 0 #c8d3df45}
+body.ff-original .ff-product-visual.ninja .ff-tech-object:before{content:"◇ · ▣ · ▤ · ◇";position:absolute;top:14px;left:18px;right:18px;
+ border:1px solid #91bdd2;text-align:center;padding:4px;color:#a9dfed;font-size:13px;border-radius:4px;background:#05111d}
+body.ff-original .ff-product-visual.ninja .ff-tech-object:after{content:"▯        ▯";position:absolute;bottom:8px;left:9px;right:9px;
+ border-top:2px solid #a6b7cc;text-align:center;padding:12px 4px;font-weight:1000;font-size:26px;color:#d4dfeb}
+body.ff-original .ff-product-visual.roborock .ff-tech-object,
+body.ff-original .ff-product-visual.mova .ff-tech-object{width:138px;height:138px;border-radius:50%;
+ background:radial-gradient(circle at 44% 35%,#aeb8cf,#586d83 36%,#152435 61%,#090f1c 77%);
+ border:6px solid #8aa4bd;box-shadow:inset 0 0 18px #c7deff78}
+body.ff-original .ff-product-visual.roborock .ff-tech-object:before,
+body.ff-original .ff-product-visual.mova .ff-tech-object:before{content:"";position:absolute;left:36%;top:29%;width:27%;height:27%;
+ border-radius:50%;border:3px solid #91bad6;background:#0c2237}
+body.ff-original .ff-product-visual.mova .ff-tech-object{border-color:#b18bb9;background:radial-gradient(circle at 40% 31%,#f5d1ff,#9879a5 35%,#2b1837 70%)}
+body.ff-original .ff-product-visual .ff-tech-glow{position:absolute;inset:auto 12% 3px;height:29px;
+ background:radial-gradient(ellipse,#20e9ff55,transparent 70%);filter:blur(6px)}
+body.ff-original .p-card .product-details{border:1px solid #358db77d;background:#061b2dc2;
+ border-radius:10px;margin:12px 0;padding:3px 12px;color:#dbeef2}
+body.ff-original .p-card .product-details summary{color:#91e8ff;cursor:pointer;padding:10px 1px;font-size:12px;
+ font-weight:900;line-height:1.5}
+body.ff-original .p-card .product-details li{color:#d6eaf1;font-size:12px}
+body.ff-original .p-card .product-details[open]{border-color:#19d8e2;background:#081d2f}
+body.ff-original .p-card .affiliate-offer{margin-top:auto;padding:13px 0 0;border-top:1px solid #349fc17d}
+body.ff-original .p-card .affiliate-offer p{margin:0 0 7px}
+body.ff-original .p-card .affiliate-label{color:#ffe0a9;font-size:10px;letter-spacing:.09em;text-transform:uppercase}
+body.ff-original .p-card a.amazon-search-cta{display:flex!important;align-items:center;justify-content:center;
+ min-height:43px;text-decoration:none;border:1px solid #ffca52;border-radius:24px!important;
+ color:#14212a!important;font-size:12px;font-weight:1000;padding:11px 14px!important;
+ background:linear-gradient(113deg,#ffdc60,#ff951f)!important;
+ box-shadow:0 0 18px #ff9b3170, inset 0 1px #fff9!important;
+ text-align:center;transition:transform .15s,box-shadow .15s}
+body.ff-original .p-card a.amazon-search-cta:hover{transform:translateY(-2px);box-shadow:0 0 27px #ffac42!important}
+body.ff-original .topic-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+body.ff-original .topic{position:relative;display:flex!important;flex-direction:column;min-height:128px;min-width:0;
+ padding:23px 24px!important;border:1px solid #319ed4a0!important;border-radius:15px!important;
+ background:radial-gradient(ellipse at 90% 8%,#126e9b55,transparent 50%),linear-gradient(125deg,#102a45,#071b30)!important;
+ box-shadow:inset 0 1px #ebffff23,0 9px 17px #0004!important;text-decoration:none;gap:9px;transition:.18s}
+body.ff-original .topic:nth-child(even){border-color:#995ce3a0!important;background:radial-gradient(ellipse at 92% 10%,#7c3cbd48,transparent 46%),linear-gradient(130deg,#201d40,#0a1c32)!important}
+body.ff-original .topic:hover{transform:translateX(5px)!important;border-color:#16ecfc!important;box-shadow:0 0 20px #03ceef65!important}
+body.ff-original .topic:before{content:"▤";font-size:24px;color:#25d8f3;margin:0 0 4px;position:static;border:0;box-shadow:none}
+body.ff-original .topic:nth-child(even):before{color:#d295ff}
+body.ff-original .topic:after{content:"→";position:absolute;right:23px;bottom:20px;font-size:22px;color:#69e4f8;opacity:1}
+body.ff-original .topic strong{font-size:clamp(14px,1.35vw,17px);color:#fff;line-height:1.4;max-width:94%}
+body.ff-original .topic span{font-size:11px;letter-spacing:.07em;color:#8bebf9;font-weight:800;text-transform:uppercase}
+body.ff-original .guide{position:relative;margin:20px 0;padding:25px 25px 20px!important;
+ border:1px solid #2a90c6a8!important;border-radius:16px!important;
+ background:radial-gradient(ellipse at 90% 0%,#104d7259,transparent 42%),linear-gradient(135deg,#0a2641,#071a2d)!important;
+ box-shadow:inset 0 1px #e6ffff1c,0 8px 20px #0005!important}
+body.ff-original .guide:nth-of-type(even){border-color:#8272d19a!important;background:radial-gradient(ellipse at 90% 0%,#45216c44,transparent 42%),linear-gradient(130deg,#151c3b,#081b30)!important}
+body.ff-original .guide:before{content:"";position:absolute;top:0;bottom:0;left:0;width:3px;border-radius:2px;
+ background:linear-gradient(180deg,#0ceaff,#8a6aff,transparent);box-shadow:0 0 16px #0ceaff88}
+body.ff-original .guide h3{font-weight:1000;font-style:italic;font-size:clamp(20px,2.3vw,29px);letter-spacing:-.02em;color:white}
+body.ff-original .guide h4{color:#9beaff;font-weight:900;margin:15px 0 10px}
+body.ff-original .guide .eyebrow{color:#64e9ef;font-size:11px;letter-spacing:.12em}
+body.ff-original .guide p,body.ff-original .guide li{color:#d3e4ef;line-height:1.75;font-size:13px}
+body.ff-original .guide .details{border:1px solid #2c9da58f;background:#071e2ddc;border-radius:11px;padding:12px}
+body.ff-original .guide strong{color:#fff}
+body.ff-original #kontakt .contact-grid{display:grid!important;grid-template-columns:1fr 1.25fr;gap:19px}
+body.ff-original .legal-card,body.ff-original .contact-card{border:1px solid #269bc4a9!important;border-radius:17px!important;
+ padding:24px!important;background:radial-gradient(ellipse at 98% 3%,#157cab48,transparent 47%),linear-gradient(145deg,#102b42,#071a2d)!important;
+ box-shadow:inset 0 1px #ffffff20,0 8px 19px #0005!important}
+body.ff-original #kontakt .legal-card{border-color:#4b9be2a0!important}
+body.ff-original #kontakt .contact-card{border-color:#13d9c99e!important;background:radial-gradient(ellipse at 98% 3%,#128f8b48,transparent 47%),linear-gradient(145deg,#0e353c,#081d2e)!important}
+body.ff-original .legal-card h3,body.ff-original .contact-card h3{font-size:22px;color:white;font-weight:1000}
+body.ff-original .legal-card p,body.ff-original .contact-card p{color:#d8e9f2;line-height:1.65;font-size:13px}
+body.ff-original .legal-card a,body.ff-original .contact-card a{color:#80f8fc;text-decoration:underline;text-underline-offset:3px}
+body.ff-original .contact-card form{display:grid;gap:10px}
+body.ff-original .contact-card form label{color:#e3f9ff;font-weight:800;font-size:12px}
+body.ff-original .contact-card form input:not([type=hidden]):not([type=checkbox]),body.ff-original .contact-card form textarea{
+ width:100%;max-width:100%;min-width:0;background:#061928!important;border:1px solid #387d93!important;
+ border-radius:9px!important;color:#fff!important;padding:12px!important;box-shadow:inset 0 2px 6px #0005!important;
+ font:inherit;font-size:14px}
+body.ff-original .contact-card form input:focus,body.ff-original .contact-card form textarea:focus{outline:2px solid #21eafa;outline-offset:1px}
+body.ff-original .contact-card form button{padding:13px 20px;min-height:44px;color:#17202c;
+ background:linear-gradient(120deg,#ffdb61,#ff9b29);border:1px solid #ffe48c;
+ border-radius:26px;font-weight:1000;box-shadow:0 0 18px #ffbd3166}
+body.ff-original .contact-card .checkline{display:flex;gap:9px;align-items:flex-start;line-height:1.45}
+body.ff-original .contact-card .checkline input{margin-top:4px}
+body.ff-original #impressum,#datenschutz{background:linear-gradient(135deg,#071928,#091c2c)!important;
+ border-color:#356a8d9b!important;box-shadow:0 10px 35px #0005!important}
+body.ff-original #impressum h2,body.ff-original #datenschutz h2{font-size:clamp(25px,3.2vw,34px);font-style:normal}
+body.ff-original #impressum .legal-card,body.ff-original #datenschutz .legal-card{background:#061624!important;border-color:#326c8ab8!important;box-shadow:none!important}
+body.ff-original #impressum .legal-card p,body.ff-original #datenschutz .legal-card p{font-size:13px;line-height:1.7}
+body.ff-original #datenschutz .legal-card h3{color:#a7ebf2;font-size:16px;margin-top:20px}
+body.ff-original footer{border-top:1px solid #1bd7e58a;background:linear-gradient(150deg,#081d32,#020e17);
+ padding:25px clamp(20px,3vw,34px)!important;margin:35px 0 5px;border-radius:17px;
+ box-shadow:inset 0 1px #07dcfa33}
+body.ff-original footer a{color:#8bedff;text-decoration:none}
+body.ff-original footer a:hover{text-decoration:underline}
+body.ff-original .ff-legal-links{display:flex;gap:18px;justify-content:center;padding:15px 5px;color:#9be4ef}
+body.ff-original .ff-legal-links a{color:#80f7fc}
+body.ff-original a:focus-visible,body.ff-original button:focus-visible,body.ff-original summary:focus-visible{
+ outline:3px solid #ffe18d;outline-offset:3px}
+body.ff-original .ff-xmas-full{margin:42px auto 38px;padding:28px;border:1px solid #ffae54b6;
+ border-radius:19px;background:radial-gradient(ellipse at 90% 0%,#db79302b,transparent 45%),
+ linear-gradient(135deg,#182e40,#121527 72%);box-shadow:0 10px 30px #0006,0 0 16px #fd8b241e}
+body.ff-original .ff-xmas-full .ff-xmas-tag{color:#ffd08d;letter-spacing:.16em;font-size:11px;font-weight:1000}
+body.ff-original .ff-xmas-full h2{font-size:clamp(26px,3.4vw,41px);font-style:italic;line-height:1.1;letter-spacing:-.035em;margin:10px 0 13px;color:#fff}
+body.ff-original .ff-xmas-full p{font-size:14px;color:#d5e3ed;line-height:1.65;max-width:920px}
+body.ff-original .ff-xmas-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin:22px 0}
+body.ff-original .ff-xmas-card{border:1px solid #f0ae5798;border-radius:14px;padding:20px;background:linear-gradient(130deg,#2a2439,#0e2836);min-width:0}
+body.ff-original .ff-xmas-card:nth-child(even){border-color:#30cace9a;background:linear-gradient(120deg,#112d3e,#0a2035)}
+body.ff-original .ff-xmas-card>span{font-size:12px;color:#ffc179;letter-spacing:.05em}
+body.ff-original .ff-xmas-card h3{font-size:19px;line-height:1.25;color:white;font-weight:1000;margin:9px 0}
+body.ff-original .ff-xmas-card p{font-size:12px;min-height:70px}
+body.ff-original .ff-xmas-card a{display:inline-block;text-decoration:none;border:1px solid #ffbd65;
+ background:linear-gradient(105deg,#ffd358,#ffa72f);color:#16202b;
+ border-radius:22px;padding:10px 15px;font-weight:1000;font-size:12px}
+body.ff-original .ff-xmas-note{font-size:11px!important;color:#b9d5db!important}
+@media(max-width:1170px){
+ body.ff-original .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+ body.ff-original .ff-xmas-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:760px){
+ body.ff-original .ff-legal-links{display:none!important}
+ .ff-mobile-site{max-width:100%;overflow:hidden}
+ .ff-mobile-site .ff-mob-hero h1{max-width:100%!important;white-space:normal!important;overflow-wrap:anywhere!important;font-size:clamp(28px,8vw,36px)!important}
+ .ff-mobile-site .ff-mob-line{display:block!important;white-space:normal!important;max-width:100%!important}
+ .ff-mobile-site .ff-mob-bar span{font-size:10px;max-width:42%;text-align:right;white-space:normal;line-height:1.25}
+ body.ff-original main.shell{width:min(94%,640px);padding:0 0 30px}
+ body.ff-original main.shell>.section{padding:18px;margin:26px 0;border-radius:14px}
+ body.ff-original .cards{grid-template-columns:1fr;gap:14px}
+ body.ff-original .p-card{padding:16px!important}
+ body.ff-original .p-card .photo-box,body.ff-original .p-card .ff-product-visual{height:196px;min-height:196px}
+ body.ff-original .p-card .photo-box img{height:146px;max-height:146px}
+ body.ff-original .topic-grid{grid-template-columns:1fr}
+ body.ff-original .topic{min-height:103px;padding:18px!important}
+ body.ff-original #kontakt .contact-grid{grid-template-columns:1fr}
+ body.ff-original .legal-card,body.ff-original .contact-card{padding:17px!important}
+ body.ff-original .guide{padding:18px!important}
+ body.ff-original .ff-xmas-full{margin:23px auto;padding:17px}
+ body.ff-original .ff-xmas-grid{grid-template-columns:1fr}
+ body.ff-original .ff-xmas-card p{min-height:0}
+}
+@media(prefers-reduced-motion:reduce){
+ body.ff-original *{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+}
+
+</style></head><body class="ff-original"><a class="skip-link" href="#produkte">Zum Inhalt springen</a>
+<section class="ff-exact" id="start" aria-label="FundFux futuristische Startseite – Originaldesign mit anklickbaren Bereichen">
+<img class="ff-full" width="1672" height="941" src="assets/fundfux/design-original-1zu1.webp" alt="FundFux – futuristische Gaming-Startseite. Hero mit PlayStation-Controller, Gaming-Kacheln, Guides und Weihnachtsbereich. KI-illustrative Gestaltung." fetchpriority="high">
+<div id="gaming" class="ff-sr">Gaming-Bereich</div>
+<a class="ff-hit" aria-label="Home" href="#start" rel="noopener noreferrer" style="left:32.95455%;top:0.85016%;width:6.04067%;height:4.88842%;"><span class="ff-sr">Home</span></a>
+<a class="ff-hit" aria-label="Gaming" href="#gaming" rel="noopener noreferrer" style="left:40.43062%;top:0.74389%;width:6.45933%;height:4.88842%;"><span class="ff-sr">Gaming</span></a>
+<a class="ff-hit" aria-label="Technik" href="#produkte" rel="noopener noreferrer" style="left:48.20574%;top:0.74389%;width:5.86124%;height:4.88842%;"><span class="ff-sr">Technik</span></a>
+<a class="ff-hit" aria-label="Weihnachten" href="#weihnachten" rel="noopener noreferrer" style="left:55.02392%;top:0.74389%;width:7.29665%;height:4.99469%;"><span class="ff-sr">Weihnachten</span></a>
+<a class="ff-hit" aria-label="Haushalt" href="#produkte" rel="noopener noreferrer" style="left:63.51675%;top:0.74389%;width:6.57895%;height:4.99469%;"><span class="ff-sr">Haushalt</span></a>
+<a class="ff-hit" aria-label="Deals" href="#produkte" rel="noopener noreferrer" style="left:70.63397%;top:0.74389%;width:5.20335%;height:4.99469%;"><span class="ff-sr">Deals</span></a>
+<a class="ff-hit" aria-label="Guides" href="#ratgeber-uebersicht" rel="noopener noreferrer" style="left:77.45215%;top:0.74389%;width:5.38278%;height:4.99469%;"><span class="ff-sr">Guides</span></a>
+<a class="ff-hit" aria-label="Kontakt" href="#kontakt" rel="noopener noreferrer" style="left:91.86603%;top:0.74389%;width:4.48565%;height:4.88842%;"><span class="ff-sr">Kontakt</span></a>
+<a class="ff-hit" aria-label="Produkte entdecken" href="#produkte" rel="noopener noreferrer" style="left:7.17703%;top:25.07970%;width:17.04545%;height:4.88842%;"><span class="ff-sr">Produkte entdecken</span></a>
+<a class="ff-hit" aria-label="Gaming Guide" href="#gaming" rel="noopener noreferrer" style="left:25.23923%;top:25.29224%;width:14.11483%;height:4.67588%;"><span class="ff-sr">Gaming Guide</span></a>
+<a class="ff-hit" aria-label="Alle Gaming Guides" href="#ratgeber-uebersicht" rel="noopener noreferrer" style="left:81.10048%;top:32.30606%;width:14.95215%;height:4.03826%;"><span class="ff-sr">Alle Gaming Guides</span></a>
+<a class="ff-hit" aria-label="PS5 bei Amazon suchen" href="https://www.amazon.de/s?k=PlayStation+5+PS5+Konsole&amp;tag=fundfux-21" rel="nofollow sponsored noopener noreferrer" target="_blank" style="left:5.92105%;top:49.73433%;width:10.82536%;height:3.93199%;"><span class="ff-sr">PS5 bei Amazon suchen</span></a>
+<a class="ff-hit" aria-label="Xbox bei Amazon suchen" href="https://www.amazon.de/s?k=Xbox+Series+X+Konsole&amp;tag=fundfux-21" rel="nofollow sponsored noopener noreferrer" target="_blank" style="left:36.60287%;top:49.62806%;width:11.12440%;height:4.14453%;"><span class="ff-sr">Xbox bei Amazon suchen</span></a>
+<a class="ff-hit" aria-label="Nintendo Switch 2 bei Amazon suchen" href="https://www.amazon.de/s?k=Nintendo+Switch+2+Konsole&amp;tag=fundfux-21" rel="nofollow sponsored noopener noreferrer" target="_blank" style="left:66.32775%;top:49.84060%;width:11.12440%;height:4.14453%;"><span class="ff-sr">Nintendo Switch 2 bei Amazon suchen</span></a>
+<a class="ff-hit" aria-label="Gaming-Handhelds bei Amazon suchen" href="https://www.amazon.de/s?k=Gaming+Handheld+Steam+Deck+ROG+Ally&amp;tag=fundfux-21" rel="nofollow sponsored noopener noreferrer" target="_blank" style="left:6.16029%;top:67.16259%;width:11.24402%;height:4.25080%;"><span class="ff-sr">Gaming-Handhelds bei Amazon suchen</span></a>
+<a class="ff-hit" aria-label="Controller und Headsets bei Amazon suchen" href="https://www.amazon.de/s?k=PS5+Controller+Gaming+Headset&amp;tag=fundfux-21" rel="nofollow sponsored noopener noreferrer" target="_blank" style="left:36.48325%;top:67.05632%;width:11.36364%;height:4.25080%;"><span class="ff-sr">Controller und Headsets bei Amazon suchen</span></a>
+<a class="ff-hit" aria-label="Gaming B-Ware bei Amazon suchen" href="https://www.amazon.de/s?k=Gaming+Warehouse+Retourenkauf&amp;tag=fundfux-21" rel="nofollow sponsored noopener noreferrer" target="_blank" style="left:66.50718%;top:67.16259%;width:10.88517%;height:4.14453%;"><span class="ff-sr">Gaming B-Ware bei Amazon suchen</span></a>
+<a class="ff-hit" aria-label="Gaming Kategorien" href="#gaming" rel="noopener noreferrer" style="left:4.30622%;top:85.86610%;width:5.14354%;height:9.98937%;"><span class="ff-sr">Gaming Kategorien</span></a>
+<a class="ff-hit" aria-label="Technik Kategorien" href="#produkte" rel="noopener noreferrer" style="left:9.92823%;top:85.86610%;width:5.26316%;height:9.98937%;"><span class="ff-sr">Technik Kategorien</span></a>
+<a class="ff-hit" aria-label="Weihnachten Kategorien" href="#weihnachten" rel="noopener noreferrer" style="left:15.90909%;top:85.86610%;width:5.44258%;height:9.98937%;"><span class="ff-sr">Weihnachten Kategorien</span></a>
+<a class="ff-hit" aria-label="Haushalt Kategorien" href="#produkte" rel="noopener noreferrer" style="left:21.71053%;top:85.86610%;width:5.26316%;height:9.98937%;"><span class="ff-sr">Haushalt Kategorien</span></a>
+<a class="ff-hit" aria-label="Deals Kategorien" href="#produkte" rel="noopener noreferrer" style="left:27.57177%;top:85.86610%;width:5.20335%;height:9.98937%;"><span class="ff-sr">Deals Kategorien</span></a>
+<a class="ff-hit" aria-label="Guides Kategorien" href="#ratgeber-uebersicht" rel="noopener noreferrer" style="left:33.37321%;top:85.86610%;width:4.48565%;height:9.98937%;"><span class="ff-sr">Guides Kategorien</span></a>
+<a class="ff-hit" aria-label="Tipps und Guides" href="#ratgeber-uebersicht" rel="noopener noreferrer" style="left:58.01435%;top:81.82784%;width:9.56938%;height:3.93199%;"><span class="ff-sr">Tipps und Guides</span></a>
+<a class="ff-hit" aria-label="Weihnachtsgeschenke entdecken" href="#weihnachten" rel="noopener noreferrer" style="left:66.98565%;top:90.01063%;width:14.17464%;height:5.31350%;"><span class="ff-sr">Weihnachtsgeschenke entdecken</span></a>
+</section>
+<div class="ff-image-credit">Gestaltung: illustrative KI-Visualisierung. Produktabbildungen können vom tatsächlichen Artikel abweichen. Preise, Verkäufer und Verfügbarkeit immer bei Amazon prüfen.</div>
+<nav class="ff-legal-links" aria-label="Pflichtinformationen">
+<a href="#kontakt">Kontakt</a><a href="#impressum">Impressum</a><a href="#datenschutz">Datenschutz</a>
 </nav>
-<div class="hero-layout">
-<div class="hero-copy">
-<div class="eyebrow"><span class="signal-dot" aria-hidden="true"></span> FUTURE SHOPPING // FUNDFUX</div>
-<div class="hero-chip-row" aria-hidden="true"><span>DISCOVER</span><span>COMPARE</span><span>DECIDE</span></div>
-<h1>Die Zukunft<br>des <span class="gradient-text">Findens.</span><br>Beginnt hier.</h1>
-<p class="hero-lede">Willkommen bei FundFux. Entdecke echte Produktfotos, durchdachte Kaufhilfen und transparente Amazon-Links – in einer Produktwelt, die sich nach morgen anfühlt.</p>
-<div class="hero-actions">
-<a href="#produkte" class="cta">Produktwelt erkunden</a>
-<a href="#gaming" class="cta-sub">Gaming-Welt <span aria-hidden="true">↗</span></a><a href="#ratgeber-uebersicht" class="cta-sub">Kaufhilfen entdecken <span aria-hidden="true">↗</span></a>
+<div class="ff-mobile-site">
+<header class="ff-mob-bar"><a class="ff-mob-brand" href="#start">FUND<b>FUX</b></a><span>Clever finden. Besser kaufen.</span></header>
+<div class="ff-mob-nav" role="navigation" aria-label="Hauptnavigation"><a href="#mob-gaming">Gaming</a><a href="#produkte">Technik</a><a href="#weihnachten">Weihnachten</a><a href="#produkte">Haushalt</a><a href="#ratgeber-uebersicht">Guides</a><a href="#kontakt">Kontakt</a></div>
+<section class="ff-mob-hero">
+<div class="ff-mob-kicker">GAMING · TECHNIK · DEALS · GUIDES</div>
+<h1><span class="ff-mob-line">Die Zukunft des</span> <em class="ff-mob-line">smarten</em> <strong class="ff-mob-line">Einkaufens</strong></h1>
+<p>Finde Produkte für Gaming, Technik, Haushalt und mehr – mit nachvollziehbaren Kaufkriterien und transparenten Amazon-Partnerlinks.</p>
+<div class="ff-mob-art"><img src="assets/fundfux/hero-controller.webp" width="514" height="247" alt="Futuristische KI-Illustration eines PlayStation-ähnlichen Controllers über einer Neon-Plattform"></div>
+<div class="ff-mob-btns"><a href="#produkte">🛒 Produkte entdecken →</a><a class="ff-blue" href="#mob-gaming">🎮 Gaming Guide →</a></div>
+</section>
+<div class="ff-mob-features"><div>⚡ <strong>Smarte Produktsuche</strong> – Angebote und Modelle vergleichen</div><div>⚖️ <strong>Ehrliche Empfehlungen</strong> – keine erfundenen Tests</div><div>⭐ <strong>Top-Deals &amp; Updates</strong> – nur nach Angebotsprüfung</div></div>
+<section id="mob-gaming" class="ff-mob-guides" aria-labelledby="ff-mobile-guide-title"><h2 id="ff-mobile-guide-title">🎮 Gaming <em>Guides</em></h2><p>Gaming-Produkte, Vergleiche und Kaufhilfen.</p>
+<div class="ff-mob-cards"><article class="ff-mob-card blue">
+ <div class="ff-mobile-tag">PlayStation</div><h3>PS5 &amp; PS5 Pro</h3>
+ <img class="ff-mobile-illustration" src="assets/fundfux/ps5.webp" alt="Illustrative KI-Grafik zu PS5 &amp; PS5 Pro" loading="lazy" width="240" height="160">
+ <p>PS5-Konsole, Zubehör und Spiele – vergleiche die genaue Ausführung.</p><a class="ff-buy" target="_blank" rel="nofollow sponsored noopener noreferrer" href="https://www.amazon.de/s?k=PlayStation+5+PS5+Konsole&amp;tag=fundfux-21">Bei Amazon suchen →</a><small>Anzeige · Affiliate-Link · Suchergebnisse</small>
+ </article>
+<article class="ff-mob-card green">
+ <div class="ff-mobile-tag">Xbox</div><h3>Xbox Series X|S</h3>
+ <img class="ff-mobile-illustration" src="assets/fundfux/xbox.webp" alt="Illustrative KI-Grafik zu Xbox Series X|S" loading="lazy" width="240" height="160">
+ <p>Series X und Series S unterscheiden sich. Vergleiche Modelle und Zubehör.</p><a class="ff-buy" target="_blank" rel="nofollow sponsored noopener noreferrer" href="https://www.amazon.de/s?k=Xbox+Series+X+Konsole&amp;tag=fundfux-21">Bei Amazon suchen →</a><small>Anzeige · Affiliate-Link · Suchergebnisse</small>
+ </article>
+<article class="ff-mob-card pink">
+ <div class="ff-mobile-tag">Nintendo</div><h3>Nintendo Switch 2</h3>
+ <img class="ff-mobile-illustration" src="assets/fundfux/switch.webp" alt="Illustrative KI-Grafik zu Nintendo Switch 2" loading="lazy" width="240" height="160">
+ <p>Mobile Spielewelt der nächsten Generation: Zubehör und Modell prüfen.</p><a class="ff-buy" target="_blank" rel="nofollow sponsored noopener noreferrer" href="https://www.amazon.de/s?k=Nintendo+Switch+2&amp;tag=fundfux-21">Bei Amazon suchen →</a><small>Anzeige · Affiliate-Link · Suchergebnisse</small>
+ </article>
+<article class="ff-mob-card blue">
+ <div class="ff-mobile-tag">PC Handheld</div><h3>Gaming-Handhelds</h3>
+ <img class="ff-mobile-illustration" src="assets/fundfux/handheld.webp" alt="Illustrative KI-Grafik zu Gaming-Handhelds" loading="lazy" width="240" height="160">
+ <p>Tragbare PC-Spielgeräte: Leistung und Kompatibilität vor dem Kauf prüfen.</p><a class="ff-buy" target="_blank" rel="nofollow sponsored noopener noreferrer" href="https://www.amazon.de/s?k=Gaming+Handheld+Steam+Deck+ROG+Ally&amp;tag=fundfux-21">Bei Amazon suchen →</a><small>Anzeige · Affiliate-Link · Suchergebnisse</small>
+ </article>
+<article class="ff-mob-card pink">
+ <div class="ff-mobile-tag">Zubehör</div><h3>Controller &amp; Headsets</h3>
+ <img class="ff-mobile-illustration" src="assets/fundfux/headset.webp" alt="Illustrative KI-Grafik zu Controller &amp; Headsets" loading="lazy" width="240" height="160">
+ <p>Controller, Headsets und Gaming-Zubehör für dein Setup.</p><a class="ff-buy" target="_blank" rel="nofollow sponsored noopener noreferrer" href="https://www.amazon.de/s?k=Gaming+Controller+Headsets&amp;tag=fundfux-21">Bei Amazon suchen →</a><small>Anzeige · Affiliate-Link · Suchergebnisse</small>
+ </article>
+<article class="ff-mob-card blue">
+ <div class="ff-mobile-tag">Retourenkauf</div><h3>Gaming-B-Ware</h3>
+ <img class="ff-mobile-illustration" src="assets/fundfux/bware.webp" alt="Illustrative KI-Grafik zu Gaming-B-Ware" loading="lazy" width="240" height="160">
+ <p>Gebrauchte Ware: Zustand und Verkäuferangaben besonders sorgfältig prüfen.</p><a class="ff-buy" target="_blank" rel="nofollow sponsored noopener noreferrer" href="https://www.amazon.de/s?k=Gaming+Warehouse+Deals&amp;tag=fundfux-21">Bei Amazon suchen →</a><small>Anzeige · Affiliate-Link · Suchergebnisse</small>
+ </article></div></section>
+<div class="ff-mob-benefits"><div>🏆 Top-Deals &amp; Ratgeber</div><div>⭐ Produktvergleiche</div><div>↗ Verständliche Kaufberatung</div><div>🛡️ Transparent kaufen</div></div>
+<div class="ff-mob-christmas"><img loading="lazy" width="226" height="161" src="assets/fundfux/xmas.webp" alt="Illustriertes Weihnachtsmotiv mit Geschenkpaketen">
+<h2>🎁 Weihnachten bei FundFux</h2><p>Geschenkideen für Gamer, Technikfans und Familie.</p><a href="#weihnachten">Geschenkideen entdecken →</a></div>
+<div class="ff-mobile-disclaimer">Werbung: Als Amazon-Partner verdiene ich an qualifizierten Verkäufen. KI-Illustrationen sind keine realen Produkttests. Bei den Partnerlinks handelt es sich um Amazon-Suchergebnisse, nicht um bestätigte Einzelangebote.</div>
 </div>
-<div class="hero-proof" aria-label="Inhalte auf FundFux">
-<div>08<small>Produktwelten</small></div>
-<div>10<small>Kaufhilfen</small></div>
-<div>05<small>Echte Fotos</small></div>
+<section id="weihnachten" class="ff-xmas-full" aria-labelledby="ff-xmas-heading">
+<div class="ff-xmas-tag">WEIHNACHTEN 2026 · DEINE GESCHENKIDEEN</div>
+<h2 id="ff-xmas-heading">Geschenke aus der Zukunft. Clever ausgesucht.</h2>
+<p>Für Gamer, Technikfans, Leser und den Haushalt. Wir zeigen Kaufkriterien und passende Produktwelten. Die genannten Budgetbereiche sind Ideen und keine bestätigten Einzelpreise. Bei Amazon bitte immer Verkäufer, Modell und Verfügbarkeit prüfen.</p>
+<div class="ff-xmas-grid">
+<article class="ff-xmas-card"><span>01 / KÜCHE</span><h3>Ninja AF400EU</h3><p>Zwei getrennte Schubladen für verschiedene Zubereitungen. Prüfe Modellcode und Stellfläche.</p><a href="#p1">Ninja entdecken →</a></article>
+<article class="ff-xmas-card"><span>02 / SMART HOME</span><h3>Roborock &amp; Co.</h3><p>Saugroboter mit Station, Bürsten und Zubehör. Kein pauschaler Verkäufer- oder Rabattvergleich.</p><a href="#p2">Haushaltsgeräte →</a></article>
+<article class="ff-xmas-card"><span>03 / LESEN</span><h3>Kindle E-Reader</h3><p>Für Leseratten: Displaygröße, Beleuchtung und Lesefunktionen auswählen.</p><a href="#p7">Kindle ansehen →</a></article>
+<article class="ff-xmas-card"><span>04 / GAMING</span><h3>Konsolen &amp; Zubehör</h3><p>Unterschiedliche Modelle, Controller und Headsets mit transparenten Kaufkriterien.</p><a href="#gaming">Gaming Guides →</a></article>
 </div>
-</div>
-<div class="hero-visual" aria-hidden="true">
-<div class="holo-grid"></div>
-<div class="holo-orbit"></div><div class="holo-orbit second"></div><div class="holo-orbit third"></div>
-<div class="holo-sparks"></div>
-<div class="holo-core">
-<svg viewBox="0 0 220 220" width="78%" height="78%" aria-hidden="true">
-<defs><linearGradient id="foxline" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#82faff"/><stop offset=".53" stop-color="#b4a4ff"/><stop offset="1" stop-color="#ffa968"/></linearGradient></defs>
-<path d="M40 35 L82 66 L110 57 L138 66 L180 35 L173 110 L190 136 L153 180 L110 200 L67 180 L30 136 L47 110 Z" fill="rgba(37,80,119,.13)" stroke="url(#foxline)" stroke-width="5" stroke-linejoin="round"/>
-<path d="M47 110 L77 97 L110 112 L143 97 L173 110 M30 136 L79 149 L110 177 L141 149 L190 136 M79 149 L95 131 L110 139 L125 131 L141 149" stroke="#77dcf2" fill="none" stroke-width="3" opacity=".8"/>
-<path d="M67 122 L97 126 L82 135 Z M153 122 L123 126 L138 135 Z" fill="#9dfbff"/>
-<path d="M100 157 L110 166 L120 157 Z" fill="#ffa869"/>
-<path d="M82 66 L66 95 L51 54 Z M138 66 L154 95 L169 54 Z" fill="rgba(255,159,117,.31)"/>
-</svg>
-<div class="core-mark">FF // 2026</div>
-</div>
-<div class="holo-float top"><strong>DISCOVER MODE</strong>Neues entdecken</div>
-<div class="holo-float left"><strong>REAL IMAGE DATA</strong>Echte Produktfotos</div>
-<div class="holo-float bottom"><strong>SMART BUYING</strong>Bewusst entscheiden</div>
-</div></div></div></header>
-<div class="signal-bar" aria-label="FundFux Schwerpunkte"><div class="shell signal-inner"><span>Future-ready</span><span>Transparente Partnerlinks</span><span>Unabhängige Kaufhilfen</span><span>Ohne erfundene Tests</span></div></div><main class="shell">
-<div class="notice"><strong>Transparenz:</strong> FundFux ist ein unabhängiges Affiliate-Projekt. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen. Die Produktkarten enthalten gekennzeichnete Affiliate-Links zu Amazon-Suchergebnissen. Für qualifizierte Käufe kann eine Provision anfallen. Preise, Verkäufer und Lagerbestand prüfen wir nicht live; die angezeigten Ergebnisse können auch Drittanbieter enthalten. Es gibt keine ungeprüften Einzelprodukt-Kaufbuttons oder Bestandsversprechen.</div>
-<section class="gaming-section" id="gaming" aria-labelledby="gaming-title"><div class="section-topline">NEW CATEGORY / GAMING UNIVERSE</div><div class="gaming-heading"><div><h2 id="gaming-title">LEVEL UP. <span>FUTURE ON.</span></h2><p>Gaming, Konsolen und Hardware – für PC, Xbox, PlayStation und Nintendo. Echte Kaufhilfen statt erfundener Testergebnisse und Lockpreise.</p></div><div class="gaming-counter">8 Bereiche <span>+ GTA VI Spezial</span></div></div><div class="gta-feature"><div class="gta-info"><span class="gta-overline">SPOTLIGHT // UPCOMING RELEASE</span><h3><span>GRAND THEFT AUTO</span> <strong>VI</strong></h3><div class="gta-date">19.11.2026 <span>Offizieller Erscheinungstermin</span></div><p>Rockstar Games bestätigt die Veröffentlichung für <strong>PlayStation 5 und Xbox Series X|S</strong>. Für PC ist bislang kein offizieller Veröffentlichungstermin bestätigt; auf PS4 erscheint GTA VI nicht.</p><p class="gta-warning">Achtung: Die folgenden Amazon-Links öffnen Suchergebnisse. Eine offizielle Amazon-Vorbestellung, Preis, Verkäufer und Lieferbarkeit sind nicht geprüft. Prüfe vor einer Bestellung insbesondere Plattform, Edition und seriösen Verkäufer. Altersfreigabe beachten.</p><div class="gta-buttons"><div class="gaming-link-block"><span>Anzeige · Affiliate-Link</span><a href="https://www.amazon.de/s?k=Grand+Theft+Auto+VI+PS5&amp;tag=fundfux-21" target="_blank" rel="nofollow sponsored noopener noreferrer" class="gaming-buy">GTA VI für PS5 auf Amazon suchen <span aria-hidden="true">↗</span></a></div><div class="gaming-link-block"><span>Anzeige · Affiliate-Link</span><a href="https://www.amazon.de/s?k=Grand+Theft+Auto+VI+Xbox+Series+X&amp;tag=fundfux-21" target="_blank" rel="nofollow sponsored noopener noreferrer" class="gaming-buy">GTA VI für Xbox auf Amazon suchen <span aria-hidden="true">↗</span></a></div></div><a class="gta-source" target="_blank" rel="noopener noreferrer" href="https://www.rockstargames.com/VI">Offizielle Informationen bei Rockstar Games ↗</a></div><div class="gta-art" aria-hidden="true"><div class="gta-glow"></div><div class="gta-art-top">VICE CITY // NEON ERA</div><div class="gta-roman">VI</div><div class="gta-art-bottom">GAMING <b>2026</b></div></div></div><div class="gaming-grid"><article class="gaming-card"><div class="gaming-index">01 / PlayStation</div><h3>PS5 &amp; PS5 Pro</h3><p>PS5-Konsole oder PS5 Pro? Vergleiche Laufwerk, Speicher, Zubehör und Bundles. Nicht jedes Angebot enthält dieselben Komponenten.</p><div class="gaming-actions"><div class="gaming-link-block"><span>Anzeige · Affiliate-Link</span><a href="https://www.amazon.de/s?k=PlayStation+5+Konsole&amp;tag=fundfux-21" target="_blank" rel="nofollow sponsored noopener noreferrer" class="gaming-buy">PS5-Konsole bei Amazon suchen <span aria-hidden="true">↗</span></a></div><div class="gaming-link-block"><span>Anzeige · Affiliate-Link</span><a href="https://www.amazon.de/s?k=PlayStation+5+Pro+Konsole&amp;tag=fundfux-21" target="_blank" rel="nofollow sponsored noopener noreferrer" class="gaming-buy">PS5 Pro bei Amazon suchen <span aria-hidden="true">↗</span></a></div></div></article><article class="gaming-card"><div class="gaming-index">02 / Xbox</div><h3>Xbox Series X|S</h3><p>Series X und Series S unterscheiden sich unter anderem beim Disc-Laufwerk. Prüfe die genaue Modellvariante und den Lieferumfang.</p><div class="gaming-actions"><div class="gaming-link-block"><span>Anzeige · Affiliate-Link</span><a href="https://www.amazon.de/s?k=Xbox+Series+X+Konsole&amp;tag=fundfux-21" target="_blank" rel="nofollow sponsored noopener noreferrer" class="gaming-buy">Xbox Series X bei Amazon suchen <span aria-hidden="true">↗</span></a></div><div class="gaming-link-block"><span>Anzeige · Affiliate-Link</span><a href="https://www.amazon.de/s?k=Xbox+Series+S+Konsole&amp;tag=fundfux-21" target="_blank" rel="nofollow sponsored noopener noreferrer" class="gaming-buy">Xbox Series S bei Amazon suchen <span aria-hidden="true">↗</span></a></div></div></article><article class="gaming-card"><div class="gaming-index">03 / PlayStation 4</div><h3>PS4-Games &amp; Konsole</h3><p>Auch ältere PS4-Spiele und gebrauchte Konsolen können interessant sein. Achte auf Zustand, Disc, Region und Kompatibilität.</p><div class="gaming-actions"><div class="gaming-link-block"><span>Anzeige · Affiliate-Link</span><a href="https://www.amazon.de/s?k=PlayStation+4+Spiele+PS4&amp;tag=fundfux-21" target="_blank" rel="nofollow sponsored noopener noreferrer" class="gaming-buy">PS4-Spiele bei Amazon suchen <span aria-hidden="true">↗</span></a></div><div class="gaming-link-block"><span>Anzeige · Affiliate-Link</span><a href="https://www.amazon.de/s?k=PlayStation+4+Konsole&amp;tag=fundfux-21" target="_blank" rel="nofollow sponsored noopener noreferrer" class="gaming-buy">PS4-Konsole bei Amazon suchen <span aria-hidden="true">↗</span></a></div></div></article><article class="gaming-card"><div class="gaming-index">04 / PC Gaming</div><h3>PC-Games &amp; Gaming-PCs</h3><p>PC-Spiele, Komplett-PCs und Hardware: Prüfe Mindestanforderungen, Plattform, Aktivierungscode und aufrüstbare Komponenten.</p><div class="gaming-actions"><div class="gaming-link-block"><span>Anzeige · Affiliate-Link</span><a href="https://www.amazon.de/s?k=PC+Spiele+Gaming&amp;tag=fundfux-21" target="_blank" rel="nofollow sponsored noopener noreferrer" class="gaming-buy">PC-Spiele bei Amazon suchen <span aria-hidden="true">↗</span></a></div><div class="gaming-link-block"><span>Anzeige · Affiliate-Link</span><a href="https://www.amazon.de/s?k=Gaming+PC+Desktop&amp;tag=fundfux-21" target="_blank" rel="nofollow sponsored noopener noreferrer" class="gaming-buy">Gaming-PCs bei Amazon suchen <span aria-hidden="true">↗</span></a></div></div></article><article class="gaming-card"><div class="gaming-index">05 / Nintendo</div><h3>Nintendo Switch 2</h3><p>Für mobiles Gaming und das Spielen am Fernseher. Beachte Modell, enthaltene Controller, Spielekompatibilität und Editionsunterschiede.</p><div class="gaming-actions"><div class="gaming-link-block"><span>Anzeige · Affiliate-Link</span><a href="https://www.amazon.de/s?k=Nintendo+Switch+2+Konsole&amp;tag=fundfux-21" target="_blank" rel="nofollow sponsored noopener noreferrer" class="gaming-buy">Switch 2 bei Amazon suchen <span aria-hidden="true">↗</span></a></div><div class="gaming-link-block"><span>Anzeige · Affiliate-Link</span><a href="https://www.amazon.de/s?k=Nintendo+Switch+2+Spiele&amp;tag=fundfux-21" target="_blank" rel="nofollow sponsored noopener noreferrer" class="gaming-buy">Switch-2-Spiele bei Amazon suchen <span aria-hidden="true">↗</span></a></div></div></article><article class="gaming-card"><div class="gaming-index">06 / PC Handheld</div><h3>Gaming-Handhelds</h3><p>Bei Steam Deck und anderen Handhelds zählen Speicher, Akkulaufzeit, Bedienung und unterstützte Spiele.</p><div class="gaming-actions"><div class="gaming-link-block"><span>Anzeige · Affiliate-Link</span><a href="https://www.amazon.de/s?k=Steam+Deck+Gaming+Handheld&amp;tag=fundfux-21" target="_blank" rel="nofollow sponsored noopener noreferrer" class="gaming-buy">Gaming-Handheld bei Amazon suchen <span aria-hidden="true">↗</span></a></div></div></article><article class="gaming-card"><div class="gaming-index">07 / Zubehör</div><h3>Controller &amp; Headsets</h3><p>Ersatzcontroller, Headsets und Ladezubehör: Prüfe Originalhersteller, Anschluss, Plattformkompatibilität und Garantie.</p><div class="gaming-actions"><div class="gaming-link-block"><span>Anzeige · Affiliate-Link</span><a href="https://www.amazon.de/s?k=DualSense+Wireless+Controller&amp;tag=fundfux-21" target="_blank" rel="nofollow sponsored noopener noreferrer" class="gaming-buy">PS5-Controller bei Amazon suchen <span aria-hidden="true">↗</span></a></div><div class="gaming-link-block"><span>Anzeige · Affiliate-Link</span><a href="https://www.amazon.de/s?k=Xbox+Wireless+Controller&amp;tag=fundfux-21" target="_blank" rel="nofollow sponsored noopener noreferrer" class="gaming-buy">Xbox-Controller bei Amazon suchen <span aria-hidden="true">↗</span></a></div></div></article><article class="gaming-card"><div class="gaming-index">08 / Retourenkauf</div><h3>Gaming-B-Ware</h3><p>Bei Rückläufern und Gebrauchtangeboten gelten Zustand, Lieferumfang und konkrete Verkäuferangaben. B-Ware ist kein pauschal bestätigtes Schnäppchen.</p><div class="gaming-actions"><div class="gaming-link-block"><span>Anzeige · Affiliate-Link</span><a href="https://www.amazon.de/s?k=PS5+Xbox+Nintendo+Konsole+gebraucht&amp;tag=fundfux-21" target="_blank" rel="nofollow sponsored noopener noreferrer" class="gaming-buy">Gaming-B-Ware bei Amazon suchen <span aria-hidden="true">↗</span></a></div></div></article></div><p class="gaming-disclosure">Als Amazon-Partner verdiene ich an qualifizierten Verkäufen. Alle orange gekennzeichneten Amazon-Verweise sind Affiliate-Suchlinks mit Partnerkennung. Angebote können sich ändern; Kaufmöglichkeiten und Preise werden erst bei Amazon sichtbar. Für diese Kategorie wurden keine offiziellen Spiel- oder Konsolenbilder ohne Nutzungserlaubnis übernommen.</p></section><section class="section" id="produkte"><div class="section-topline">01 / PRODUCT UNIVERSE</div><h2>Produkte und Modellfamilien</h2>
+<p class="ff-xmas-note">Werbung: Als Amazon-Partner verdiene ich an qualifizierten Verkäufen. Auf der Seite verlinkte Amazon-Suchen sind keine bestätigten Einzelangebote. KI-Illustrationen stellen keine eigenen Tests dar.</p>
+</section>
+<main class="shell"><section class="section" id="produkte"><div class="section-topline">01 / PRODUCT UNIVERSE</div><h2>Produkte und Modellfamilien</h2>
 <p class="intro">Acht kuratierte Produktwelten aus Küche, Reinigung und smarter Technik. Fünf Karten zeigen echte, frei lizenzierte Fotos; für drei Modelle fehlen noch freigegebene Aufnahmen. Die gekennzeichneten Buttons führen zu Amazon-Suchergebnissen, nicht zu geprüften Einzelangeboten.</p>
-<div class="cards"><article class="p-card" id="p1"><div class="ptype">Küche · Produktinformation</div><div class="emoji" aria-hidden="true">🍟</div><h3>Ninja Foodi MAX Dual Zone AF400EU</h3><p class="small">Heißluftfritteuse · AF400EU</p><p>Wer Hauptgericht und Beilage parallel vorbereiten möchte, kann zwei unterschiedliche Garprogramme nutzen. SYNC zielt darauf, beide Garvorgänge gemeinsam abzuschließen; MATCH übernimmt dieselben Einstellungen auf beide Fächer.</p><details class="product-details"><summary>Technische Daten &amp; Kaufkriterien</summary><ul><li>Zwei getrennte Garzonen</li><li>9,5 Liter Gesamtvolumen</li><li>SYNC und MATCH für die Zeitplanung</li><li>Sechs Zubereitungsprogramme</li></ul><p class="check"><strong>Worauf achten?</strong> Prüfe vor dem Kauf, wie viel Stellfläche vorhanden ist und ob zwei kleine Schubladen besser passen als ein großer Garraum. Der AF400EU ist nicht automatisch identisch mit anderen AF400-Varianten.</p></details><div class="affiliate-offer"><p class="small affiliate-label"><strong>Anzeige · Affiliate-Link</strong></p><a class="amazon-search-cta" href="https://www.amazon.de/s?k=Ninja+Foodi+MAX+Dual+Zone+AF400EU&amp;tag=fundfux-21" target="_blank" rel="nofollow sponsored noopener noreferrer">Passende Produkte auf Amazon ansehen</a><p class="small">Öffnet Amazon-Suchergebnisse, <strong>kein geprüftes Einzelangebot</strong>. Prüfe bei Amazon Modell, Verkäufer, Preis und Lieferbarkeit; gegebenenfalls auch „Weitere Kaufoptionen“ für Retourenkauf/B-Ware. B-Ware-Verfügbarkeit ist nicht bestätigt.</p></div><p class="small">Keine eigenen Produkttests oder bestätigten Live-Angebote. Der Link führt auf die Amazon-Suche, nicht direkt zum Kauf.</p></article>
-<article class="p-card" id="p2"><div class="ptype">Reinigung · Produktinformation</div><div class="emoji" aria-hidden="true">🤖</div><h3>Roborock Q7 L5+</h3><p class="small">Saug-/Wischroboter · Q7 L5+</p><p>Das Plus im Namen ist wichtig: Der Q7 L5+ wird mit einer Auto-Entleerungsstation vorgestellt. Wer viele Haare auf Hartboden oder Teppichen hat, sollte vor allem die Bürstenkonstruktion und Ersatzteilkosten beachten.</p><details class="product-details"><summary>Technische Daten &amp; Kaufkriterien</summary><ul><li>8.000 Pa Herstellerangabe</li><li>PreciSense-LiDAR-Navigation</li><li>Dual Anti-Tangle-System</li><li>Auto-Entleerungsstation RockDock Plus</li></ul><p class="check"><strong>Worauf achten?</strong> Achte auf Türschwellen, Höhe unter Möbeln, Größe der Station und den Unterschied zwischen Q7 L5, Q7 L5+ und Q7 L5+ Set. Der Maximalwert in Pascal ist kein unabhängig gemessener Reinigungsvergleich.</p></details><div class="affiliate-offer"><p class="small affiliate-label"><strong>Anzeige · Affiliate-Link</strong></p><a class="amazon-search-cta" href="https://www.amazon.de/s?k=Roborock+Q7+L5%2B&amp;tag=fundfux-21" target="_blank" rel="nofollow sponsored noopener noreferrer">Passende Produkte auf Amazon ansehen</a><p class="small">Öffnet Amazon-Suchergebnisse, <strong>kein geprüftes Einzelangebot</strong>. Prüfe bei Amazon Modell, Verkäufer, Preis und Lieferbarkeit; gegebenenfalls auch „Weitere Kaufoptionen“ für Retourenkauf/B-Ware. B-Ware-Verfügbarkeit ist nicht bestätigt.</p></div><p class="small">Keine eigenen Produkttests oder bestätigten Live-Angebote. Der Link führt auf die Amazon-Suche, nicht direkt zum Kauf.</p></article>
-<article class="p-card" id="p3"><div class="ptype">Reinigung · Produktinformation</div><div class="emoji" aria-hidden="true">🧼</div><h3>MOVA V50 Ultra Complete</h3><p class="small">Saug-/Wischroboter · V50 Ultra Complete</p><p>Der V50 Ultra Complete kombiniert Saugen und Wischen mit Funktionen für verschiedene Bodenzonen. Die Automatisierung kann besonders dann interessant sein, wenn mehrere Räume und unterschiedliche Oberflächen zu reinigen sind.</p><details class="product-details"><summary>Technische Daten &amp; Kaufkriterien</summary><ul><li>24.000 Pa maximale Herstellerangabe</li><li>StepMaster-System</li><li>Anhebbare Wischmopps</li><li>Reinigungsoptionen für Haustierbereiche</li></ul><p class="check"><strong>Worauf achten?</strong> Prüfe Abmessungen von Roboter und Station, die Bauhöhe unter Möbeln und die Voraussetzungen der Schwellentechnik. Hohe Hersteller-Saugleistungswerte lassen keine direkten Aussagen über die tatsächliche Alltagsreinigung zu.</p></details><div class="affiliate-offer"><p class="small affiliate-label"><strong>Anzeige · Affiliate-Link</strong></p><a class="amazon-search-cta" href="https://www.amazon.de/s?k=MOVA+V50+Ultra+Complete&amp;tag=fundfux-21" target="_blank" rel="nofollow sponsored noopener noreferrer">Passende Produkte auf Amazon ansehen</a><p class="small">Öffnet Amazon-Suchergebnisse, <strong>kein geprüftes Einzelangebot</strong>. Prüfe bei Amazon Modell, Verkäufer, Preis und Lieferbarkeit; gegebenenfalls auch „Weitere Kaufoptionen“ für Retourenkauf/B-Ware. B-Ware-Verfügbarkeit ist nicht bestätigt.</p></div><p class="small">Keine eigenen Produkttests oder bestätigten Live-Angebote. Der Link führt auf die Amazon-Suche, nicht direkt zum Kauf.</p></article>
+<div class="cards"><article class="p-card" id="p1"><div class="ptype">Küche · Produktinformation</div><div class="ff-product-visual ninja" role="img" aria-label="Dekorative, nicht maßstabsgetreue Konzeptillustration eines Geräts mit zwei Garschubladen, kein original Ninja-Foto"><div class="ff-tech-glow"></div><div class="ff-tech-object"></div></div><h3>Ninja Foodi MAX Dual Zone AF400EU</h3><p class="small">Heißluftfritteuse · AF400EU</p><p>Wer Hauptgericht und Beilage parallel vorbereiten möchte, kann zwei unterschiedliche Garprogramme nutzen. SYNC zielt darauf, beide Garvorgänge gemeinsam abzuschließen; MATCH übernimmt dieselben Einstellungen auf beide Fächer.</p><details class="product-details"><summary>Technische Daten &amp; Kaufkriterien</summary><ul><li>Zwei getrennte Garzonen</li><li>9,5 Liter Gesamtvolumen</li><li>SYNC und MATCH für die Zeitplanung</li><li>Sechs Zubereitungsprogramme</li></ul><p class="check"><strong>Worauf achten?</strong> Prüfe vor dem Kauf, wie viel Stellfläche vorhanden ist und ob zwei kleine Schubladen besser passen als ein großer Garraum. Der AF400EU ist nicht automatisch identisch mit anderen AF400-Varianten.</p></details><div class="affiliate-offer"><p class="small affiliate-label"><strong>Anzeige · Affiliate-Link</strong></p><a class="amazon-search-cta" href="https://www.amazon.de/s?k=Ninja+Foodi+MAX+Dual+Zone+AF400EU&amp;tag=fundfux-21" target="_blank" rel="nofollow sponsored noopener noreferrer">Passende Produkte auf Amazon ansehen</a><p class="small">Öffnet Amazon-Suchergebnisse, <strong>kein geprüftes Einzelangebot</strong>. Prüfe bei Amazon Modell, Verkäufer, Preis und Lieferbarkeit; gegebenenfalls auch „Weitere Kaufoptionen“ für Retourenkauf/B-Ware. B-Ware-Verfügbarkeit ist nicht bestätigt.</p></div><p class="small">Keine eigenen Produkttests oder bestätigten Live-Angebote. Der Link führt auf die Amazon-Suche, nicht direkt zum Kauf.</p></article>
+<article class="p-card" id="p2"><div class="ptype">Reinigung · Produktinformation</div><div class="ff-product-visual roborock" role="img" aria-label="Dekorative Konzeptillustration eines runden Saugroboters, kein original Roborock-Foto"><div class="ff-tech-glow"></div><div class="ff-tech-object"></div></div><h3>Roborock Q7 L5+</h3><p class="small">Saug-/Wischroboter · Q7 L5+</p><p>Das Plus im Namen ist wichtig: Der Q7 L5+ wird mit einer Auto-Entleerungsstation vorgestellt. Wer viele Haare auf Hartboden oder Teppichen hat, sollte vor allem die Bürstenkonstruktion und Ersatzteilkosten beachten.</p><details class="product-details"><summary>Technische Daten &amp; Kaufkriterien</summary><ul><li>8.000 Pa Herstellerangabe</li><li>PreciSense-LiDAR-Navigation</li><li>Dual Anti-Tangle-System</li><li>Auto-Entleerungsstation RockDock Plus</li></ul><p class="check"><strong>Worauf achten?</strong> Achte auf Türschwellen, Höhe unter Möbeln, Größe der Station und den Unterschied zwischen Q7 L5, Q7 L5+ und Q7 L5+ Set. Der Maximalwert in Pascal ist kein unabhängig gemessener Reinigungsvergleich.</p></details><div class="affiliate-offer"><p class="small affiliate-label"><strong>Anzeige · Affiliate-Link</strong></p><a class="amazon-search-cta" href="https://www.amazon.de/s?k=Roborock+Q7+L5%2B&amp;tag=fundfux-21" target="_blank" rel="nofollow sponsored noopener noreferrer">Passende Produkte auf Amazon ansehen</a><p class="small">Öffnet Amazon-Suchergebnisse, <strong>kein geprüftes Einzelangebot</strong>. Prüfe bei Amazon Modell, Verkäufer, Preis und Lieferbarkeit; gegebenenfalls auch „Weitere Kaufoptionen“ für Retourenkauf/B-Ware. B-Ware-Verfügbarkeit ist nicht bestätigt.</p></div><p class="small">Keine eigenen Produkttests oder bestätigten Live-Angebote. Der Link führt auf die Amazon-Suche, nicht direkt zum Kauf.</p></article>
+<article class="p-card" id="p3"><div class="ptype">Reinigung · Produktinformation</div><div class="ff-product-visual mova" role="img" aria-label="Dekorative Konzeptillustration eines Saugroboters, kein original MOVA-Foto"><div class="ff-tech-glow"></div><div class="ff-tech-object"></div></div><h3>MOVA V50 Ultra Complete</h3><p class="small">Saug-/Wischroboter · V50 Ultra Complete</p><p>Der V50 Ultra Complete kombiniert Saugen und Wischen mit Funktionen für verschiedene Bodenzonen. Die Automatisierung kann besonders dann interessant sein, wenn mehrere Räume und unterschiedliche Oberflächen zu reinigen sind.</p><details class="product-details"><summary>Technische Daten &amp; Kaufkriterien</summary><ul><li>24.000 Pa maximale Herstellerangabe</li><li>StepMaster-System</li><li>Anhebbare Wischmopps</li><li>Reinigungsoptionen für Haustierbereiche</li></ul><p class="check"><strong>Worauf achten?</strong> Prüfe Abmessungen von Roboter und Station, die Bauhöhe unter Möbeln und die Voraussetzungen der Schwellentechnik. Hohe Hersteller-Saugleistungswerte lassen keine direkten Aussagen über die tatsächliche Alltagsreinigung zu.</p></details><div class="affiliate-offer"><p class="small affiliate-label"><strong>Anzeige · Affiliate-Link</strong></p><a class="amazon-search-cta" href="https://www.amazon.de/s?k=MOVA+V50+Ultra+Complete&amp;tag=fundfux-21" target="_blank" rel="nofollow sponsored noopener noreferrer">Passende Produkte auf Amazon ansehen</a><p class="small">Öffnet Amazon-Suchergebnisse, <strong>kein geprüftes Einzelangebot</strong>. Prüfe bei Amazon Modell, Verkäufer, Preis und Lieferbarkeit; gegebenenfalls auch „Weitere Kaufoptionen“ für Retourenkauf/B-Ware. B-Ware-Verfügbarkeit ist nicht bestätigt.</p></div><p class="small">Keine eigenen Produkttests oder bestätigten Live-Angebote. Der Link führt auf die Amazon-Suche, nicht direkt zum Kauf.</p></article>
 <article class="p-card" id="p4"><div class="ptype">Reinigung · Produktinformation</div><figure class="photo-box"><img loading="lazy" decoding="async" src="/assets/fundfux/dyson-v8.jpg" alt="Echter Dyson V8; Zubehör kann abweichen."><figcaption>Echter Dyson V8; Zubehör kann abweichen. Foto: Your Best Digs · <a target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/wiki/File:Dyson_V8_handstick_vacuum.jpg">Quelle</a> · <a target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a> · Bild unverändert</figcaption></figure><h3>Dyson V8 – Modelle und Varianten</h3><p class="small">Kabellose Staubsauger · Modellfamilie</p><p>Beim Dyson V8 lohnt es sich, auf den exakten Modellnamen zu achten. Ähnlich klingende Varianten können sich durch Zubehör und Lieferumfang unterscheiden – darum führen wir die V8-Familie zunächst ohne eine konkrete Angebotsempfehlung.</p><details class="product-details"><summary>Technische Daten &amp; Kaufkriterien</summary><ul><li>Modell- und Lieferumfang unterscheiden sich</li><li>Bürsten und Aufsätze prüfen</li><li>Akkuzustand bei Gebrauchtkauf beachten</li></ul><p class="check"><strong>Worauf achten?</strong> Prüfe den genauen Modellcode, die enthaltenen Düsen, die Herkunft der Ware, eventuelle Gebrauchtspuren und den Zustand des Akkus. Keine pauschalen Laufzeitversprechen für eine ganze Produktfamilie.</p></details><div class="affiliate-offer"><p class="small affiliate-label"><strong>Anzeige · Affiliate-Link</strong></p><a class="amazon-search-cta" href="https://www.amazon.de/s?k=Dyson+V8+Akkustaubsauger&amp;tag=fundfux-21" target="_blank" rel="nofollow sponsored noopener noreferrer">Passende Produkte auf Amazon ansehen</a><p class="small">Öffnet Amazon-Suchergebnisse, <strong>kein geprüftes Einzelangebot</strong>. Prüfe bei Amazon Modell, Verkäufer, Preis und Lieferbarkeit; gegebenenfalls auch „Weitere Kaufoptionen“ für Retourenkauf/B-Ware. B-Ware-Verfügbarkeit ist nicht bestätigt.</p></div><p class="small">Keine eigenen Produkttests oder bestätigten Live-Angebote. Der Link führt auf die Amazon-Suche, nicht direkt zum Kauf.</p></article>
 <article class="p-card" id="p5"><div class="ptype">Amazon-Geräte · Produktinformation</div><figure class="photo-box"><img loading="lazy" decoding="async" src="/assets/fundfux/echo-dot-3.jpg" alt="Beispielbild: Echo Dot, 3. Generation."><figcaption>Beispielbild: Echo Dot, 3. Generation. Foto: Samuel Wiki · <a target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/wiki/File:Echo_Dot_(3rd_Gen)_01.jpg">Quelle</a> · <a target="_blank" rel="noopener noreferrer" href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a> · Bild unverändert</figcaption></figure><h3>Amazon Echo – vor dem Kauf prüfen</h3><p class="small">Smart-Home-Lautsprecher · Modellwahl</p><p>Ein Echo kann als Sprachlautsprecher dienen, die verschiedenen Generationen und Bauformen sprechen jedoch unterschiedliche Anforderungen an. Für kleine Räume können andere Kriterien wichtig sein als für Musikwiedergabe im Wohnzimmer.</p><details class="product-details"><summary>Technische Daten &amp; Kaufkriterien</summary><ul><li>Raumgröße und Audioeinsatz berücksichtigen</li><li>Sprachsteuerung und Datenschutz prüfen</li><li>Kompatible Smart-Home-Geräte abgleichen</li></ul><p class="check"><strong>Worauf achten?</strong> Achte auf die konkrete Modellgeneration, die benötigten Konten, laufenden Dienste und die Datenschutzeinstellungen. Wir empfehlen bislang kein ungeprüftes Einzelangebot.</p></details><div class="affiliate-offer"><p class="small affiliate-label"><strong>Anzeige · Affiliate-Link</strong></p><a class="amazon-search-cta" href="https://www.amazon.de/s?k=Amazon+Echo+Lautsprecher&amp;tag=fundfux-21" target="_blank" rel="nofollow sponsored noopener noreferrer">Passende Produkte auf Amazon ansehen</a><p class="small">Öffnet Amazon-Suchergebnisse, <strong>kein geprüftes Einzelangebot</strong>. Prüfe bei Amazon Modell, Verkäufer, Preis und Lieferbarkeit; gegebenenfalls auch „Weitere Kaufoptionen“ für Retourenkauf/B-Ware. B-Ware-Verfügbarkeit ist nicht bestätigt.</p></div><p class="small">Keine eigenen Produkttests oder bestätigten Live-Angebote. Der Link führt auf die Amazon-Suche, nicht direkt zum Kauf.</p></article>
 <article class="p-card" id="p6"><div class="ptype">Amazon-Geräte · Produktinformation</div><figure class="photo-box"><img loading="lazy" decoding="async" src="/assets/fundfux/fire-tv-stick.jpg" alt="Beispielbild: Fire TV Stick einer älteren Generation."><figcaption>Beispielbild: Fire TV Stick einer älteren Generation. Foto: ubahnverleih · <a target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/wiki/File:Amazon_Fire_TV_Stick.jpg">Quelle</a> · <a target="_blank" rel="noopener noreferrer" href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a> · Bild unverändert</figcaption></figure><h3>Fire TV – Streaming-Stick oder Box?</h3><p class="small">Streamingzubehör · Modellwahl</p><p>Vor dem Kauf eines Streaminggeräts lohnt sich ein Blick auf den vorhandenen Fernseher und die Netzwerkanbindung. Welche Auflösung gebraucht wird, hängt vom konkreten TV und von der Nutzung ab.</p><details class="product-details"><summary>Technische Daten &amp; Kaufkriterien</summary><ul><li>TV-Anschlüsse prüfen</li><li>WLAN-Verbindung berücksichtigen</li><li>Gewünschte Apps und Abonnements vergleichen</li></ul><p class="check"><strong>Worauf achten?</strong> Modellgeneration, mitgelieferte Fernbedienung, unterstützte Dienste und eventuell notwendige kostenpflichtige Abonnements prüfen. Ein Fire-TV-Gerät macht Abonnements nicht automatisch kostenlos.</p></details><div class="affiliate-offer"><p class="small affiliate-label"><strong>Anzeige · Affiliate-Link</strong></p><a class="amazon-search-cta" href="https://www.amazon.de/s?k=Amazon+Fire+TV+Stick&amp;tag=fundfux-21" target="_blank" rel="nofollow sponsored noopener noreferrer">Passende Produkte auf Amazon ansehen</a><p class="small">Öffnet Amazon-Suchergebnisse, <strong>kein geprüftes Einzelangebot</strong>. Prüfe bei Amazon Modell, Verkäufer, Preis und Lieferbarkeit; gegebenenfalls auch „Weitere Kaufoptionen“ für Retourenkauf/B-Ware. B-Ware-Verfügbarkeit ist nicht bestätigt.</p></div><p class="small">Keine eigenen Produkttests oder bestätigten Live-Angebote. Der Link führt auf die Amazon-Suche, nicht direkt zum Kauf.</p></article>
