@@ -1,0 +1,30 @@
+[
+  {
+    "filename": "mode_foto_pexels.jpg",
+    "source": "https://www.pexels.com/photo/flat-lay-of-clothing-and-accessories-3927390/",
+    "author": "cottonbro studio",
+    "license": "Pexels License",
+    "usage": "Real fashion category photo, not an exact Amazon listing"
+  },
+  {
+    "filename": "basics_themenfoto.jpg",
+    "source": "https://www.pexels.com/video/man-hands-coffee-hand-4065921/",
+    "author": "cottonbro studio",
+    "license": "Pexels License",
+    "usage": "Real household themed video still"
+  },
+  {
+    "filename": "weihnachten_themenfoto.jpg",
+    "source": "https://www.pexels.com/video/person-wrapping-christmas-presents-6099389/",
+    "author": "Laura James",
+    "license": "Pexels License",
+    "usage": "Real gift themed video still"
+  },
+  {
+    "filename": "gaming_themenfoto.jpg",
+    "source": "https://www.pexels.com/video/a-person-playing-a-video-game-7236937/",
+    "author": "Eren Li",
+    "license": "Pexels License",
+    "usage": "Real gamepad themed video still"
+  }
+]
