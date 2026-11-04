@@ -44,3 +44,23 @@
  const section=document.getElementById(target);
  if(section&&section.tagName==="DETAILS"){section.open=true;setTimeout(()=>section.scrollIntoView({block:"start"}),80)}
 })();
+
+
+/* Legacy anchors redirect: retain old shared FundFux links after the compact redesign. */
+(function(){
+ "use strict";
+ if(location.pathname!=="/"&&!location.pathname.endsWith("/index.html"))return;
+ const anchor=location.hash.slice(1).toLowerCase();
+ const map={
+ "weihnachten":"/katalog.html#weihnachten",
+ "mob-gaming":"/katalog.html#gaming",
+ "gaming":"/katalog.html#gaming",
+ "gaming-varianten":"/katalog.html#gaming",
+ "ratgeber":"/ratgeber.html",
+ "ratgeber-uebersicht":"/ratgeber.html#ratgeber-uebersicht",
+ "impressum":"/archiv.html#impressum",
+ "datenschutz":"/archiv.html#datenschutz"
+ };
+ const target=map[anchor]||(/^ratgeber-\d+$/.test(anchor)?"/ratgeber.html#"+anchor:null);
+ if(target)location.replace(target);
+})();
