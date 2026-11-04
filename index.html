@@ -837,6 +837,99 @@ html{scroll-padding-top:15px}
 @media(max-width:1100px){.ff-shop-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.ff-shop-head{grid-template-columns:1fr}.ff-shop-head img{height:195px}.ff-shop-grid{grid-template-columns:1fr}
 .ff-shop-tabs a{flex:1 1 140px}.ff-shop-card{padding:19px}.ff-shop-2026{margin-top:12px}}
+
+/* FUNDFUX FUTURE // Signature campaign section, no external dependencies. */
+.ff-future-stage{position:relative;isolation:isolate;overflow:hidden;scroll-margin-top:24px;
+ margin:74px 0 58px;border:1px solid rgba(92,225,250,.36);border-radius:26px;
+ background:radial-gradient(ellipse at 72% 18%,rgba(65,115,227,.2),transparent 47%),
+ radial-gradient(ellipse at 15% 68%,rgba(228,121,79,.17),transparent 53%),#081426;
+ box-shadow:0 24px 85px rgba(0,4,18,.36)}
+.ff-future-stage:before{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;
+ background:linear-gradient(rgba(103,216,249,.055) 1px,transparent 1px),
+ linear-gradient(90deg,rgba(103,216,249,.055) 1px,transparent 1px);background-size:50px 50px;
+ transform:perspective(700px) rotateX(35deg) translateY(30px);opacity:.8}
+.ff-future-stage:after{content:"";position:absolute;left:-20%;right:-20%;height:2px;top:0;
+ background:linear-gradient(90deg,transparent,#7cf7ff 36%,#ffac78 66%,transparent);
+ filter:drop-shadow(0 0 9px #59eafb);animation:ff-future-scan 8s ease-in-out infinite;pointer-events:none}
+@keyframes ff-future-scan{0%,100%{top:0;opacity:.34}50%{top:100%;opacity:.68}}
+.ff-future-inner{padding:clamp(26px,5vw,66px);position:relative}
+.ff-future-head{display:grid;grid-template-columns:minmax(0,1.16fr) minmax(260px,.84fr);gap:20px;align-items:center;min-height:380px}
+.ff-future-eyebrow{font-size:11px;font-weight:950;color:#84f5ff;letter-spacing:.21em;text-transform:uppercase}
+.ff-future-head h2{font-size:clamp(37px,5.5vw,74px);line-height:1.02;letter-spacing:-.085em;
+ margin:18px 0 20px;color:#f2faff;max-width:710px}
+.ff-future-head h2 span{background:linear-gradient(100deg,#87f8ff 9%,#c0abff 54%,#ffb27b 91%);
+ background-clip:text;-webkit-background-clip:text;color:transparent}
+.ff-future-head p{font-size:15px;line-height:1.8;color:#b7d0e2;max-width:640px;margin:0 0 20px}
+.ff-future-buttons{display:flex;gap:11px;flex-wrap:wrap}
+.ff-future-buttons a{display:inline-flex;align-items:center;gap:9px;padding:14px 20px;
+ border-radius:11px;font-size:13px;text-decoration:none;font-weight:900}
+.ff-future-buttons a:first-child{color:#111b2d;background:linear-gradient(110deg,#ffba7f,#ff976a);
+ box-shadow:0 10px 35px rgba(255,128,85,.22)}
+.ff-future-buttons a:last-child{color:#e9f9ff;background:#162b45;border:1px solid #4d90b1}
+.ff-future-visual{position:relative;min-height:360px;display:grid;place-items:center;overflow:hidden}
+.ff-future-orbit{position:absolute;width:320px;height:320px;border:1px solid rgba(130,232,255,.46);
+ border-radius:50%;box-shadow:0 0 38px rgba(75,155,255,.07),inset 0 0 26px rgba(100,213,247,.06);
+ animation:ff-future-spin 18s linear infinite}
+.ff-future-orbit:nth-child(2){width:265px;height:265px;border-color:rgba(255,166,130,.36);animation-direction:reverse;animation-duration:13s}
+.ff-future-orbit:nth-child(3){width:200px;height:200px;border-color:rgba(170,145,255,.5);animation-duration:9s}
+.ff-future-orbit:before{content:"";display:block;position:absolute;width:14px;height:14px;top:18px;left:54px;
+ background:#79edff;border-radius:50%;box-shadow:0 0 20px #79edff}
+.ff-future-holo{font-size:110px;filter:drop-shadow(0 0 35px rgba(110,211,255,.47));z-index:1;
+ animation:ff-future-float 4.5s ease-in-out infinite}
+.ff-future-holo-label{position:absolute;bottom:16px;color:#98effb;font-size:11px;font-weight:900;letter-spacing:.21em}
+@keyframes ff-future-spin{to{transform:rotate(360deg)}}
+@keyframes ff-future-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
+.ff-future-line{height:1px;background:linear-gradient(90deg,transparent,rgba(127,209,239,.34),transparent);margin:11px 0 29px}
+.ff-future-subtitle{display:flex;align-items:end;justify-content:space-between;gap:14px;margin:0 0 20px}
+.ff-future-subtitle h3{margin:0;font-size:clamp(24px,3vw,37px);letter-spacing:-.06em;color:#f2faff}
+.ff-future-subtitle p{margin:0;color:#97acc6;font-size:12px}
+.ff-future-tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.ff-future-tile{position:relative;min-height:242px;overflow:hidden;border-radius:16px;
+ border:1px solid rgba(142,212,238,.26);text-decoration:none;background:#10233b;isolation:isolate;
+ box-shadow:0 10px 27px rgba(0,0,0,.18);transition:transform .23s,border-color .23s}
+.ff-future-tile:hover{transform:translateY(-6px);border-color:#8aebff}
+.ff-future-tile img{position:absolute;width:100%;height:100%;inset:0;object-fit:cover;
+ transition:transform .5s;z-index:-2}
+.ff-future-tile:hover img{transform:scale(1.08)}
+.ff-future-tile:before{content:"";position:absolute;inset:0;z-index:-1;
+ background:linear-gradient(180deg,rgba(4,14,30,.06),rgba(5,12,31,.3) 27%,rgba(3,9,24,.96) 100%)}
+.ff-future-tile span{display:block;color:#8deaf8;font-size:10px;font-weight:920;letter-spacing:.13em;margin:135px 17px 7px}
+.ff-future-tile strong{display:flex;justify-content:space-between;gap:8px;margin:0 17px;color:#f7faff;
+ font-size:19px;line-height:1.15;letter-spacing:-.04em}
+.ff-future-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-top:29px}
+.ff-future-step{border:1px solid rgba(135,223,244,.22);background:rgba(15,29,49,.7);
+ border-radius:13px;padding:16px 18px}
+.ff-future-step em{font-size:11px;color:#ffb17b;font-style:normal;font-weight:900;letter-spacing:.12em}
+.ff-future-step b{display:block;margin:8px 0 5px;color:#edf9ff}
+.ff-future-step p{font-size:12px;line-height:1.65;color:#acbfd2;margin:0}
+.ff-future-fine{font-size:12px;color:#a1b9ca;line-height:1.65;margin:23px 0 0}
+.ff-next-footer{position:relative;background:radial-gradient(ellipse at 70% 0,rgba(72,91,183,.16),transparent 57%),#060d1d;
+ border-top:1px solid rgba(100,220,250,.39);padding:45px max(20px,calc((100vw - 1180px)/2)) 33px}
+.ff-footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:27px}
+.ff-footer-brand strong{font-size:28px;letter-spacing:-.045em;color:#fff}
+.ff-footer-brand strong span{color:#ffb27c}
+.ff-footer-grid p{max-width:400px;color:#9fb9ca;font-size:13px;line-height:1.8}
+.ff-footer-grid h3{font-size:12px;letter-spacing:.14em;color:#87f6ff;text-transform:uppercase;margin:5px 0 15px}
+.ff-footer-links{display:flex;flex-direction:column;gap:11px}
+.ff-footer-links a{font-size:13px;text-decoration:none;color:#c8d8e4}
+.ff-footer-links a:hover{color:#ffb783}
+.ff-footer-bottom{display:flex;gap:13px;justify-content:space-between;flex-wrap:wrap;
+ border-top:1px solid rgba(123,206,242,.19);margin-top:31px;padding-top:19px;
+ font-size:11px;color:#839daf;line-height:1.6}
+@media(max-width:1050px){.ff-future-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.ff-future-tile{min-height:210px}.ff-future-tile span{margin-top:115px}}
+@media(max-width:700px){.ff-future-stage{margin:40px 0 34px}.ff-future-head{grid-template-columns:1fr;min-height:0}
+.ff-future-visual{min-height:210px;opacity:.58}.ff-future-orbit{width:200px;height:200px}
+.ff-future-orbit:nth-child(2){width:160px;height:160px}.ff-future-orbit:nth-child(3){width:120px;height:120px}
+.ff-future-holo{font-size:75px}.ff-future-holo-label{bottom:0}
+.ff-future-buttons{display:grid;grid-template-columns:1fr}
+.ff-future-buttons a{justify-content:center}.ff-future-steps{grid-template-columns:1fr}
+.ff-future-subtitle{display:block}.ff-future-subtitle p{margin:8px 0 0}
+.ff-footer-grid{grid-template-columns:1fr 1fr}.ff-footer-brand{grid-column:1 / -1}}
+@media(max-width:440px){.ff-future-tiles{grid-template-columns:1fr}
+.ff-future-tile{min-height:155px}.ff-future-tile span{margin-top:72px}
+.ff-future-inner{padding:24px 17px}.ff-next-footer{padding:34px 20px}}
+@media(prefers-reduced-motion:reduce){.ff-future-stage:after,.ff-future-orbit,.ff-future-holo{animation:none}
+.ff-future-tile,.ff-future-tile img{transition:none}}
 </style></head><body class="ff-original"><a class="skip-link" href="#produkte">Zum Inhalt springen</a>
 <section class="ff-exact" id="start" aria-label="FundFux futuristische Startseite – Originaldesign mit anklickbaren Bereichen">
 <img class="ff-full" width="1672" height="941" src="assets/fundfux/design-original-1zu1.webp" alt="FundFux – futuristische Gaming-Startseite. Hero mit PlayStation-Controller, Gaming-Kacheln, Guides und Weihnachtsbereich. KI-illustrative Gestaltung." fetchpriority="high">
@@ -1160,7 +1253,33 @@ html{scroll-padding-top:15px}
 <article class="guide" id="ratgeber-7"><div class="eyebrow">FundFux-Ratgeber 07 · 2. November 2026</div><h3>Geschenkideen ohne irreführende Rabatte</h3><p><strong>Besser passende Geschenke statt kurzfristiger Kaufdruck.</strong></p><div class="notice"><strong>Unabhängige Kaufhilfe:</strong> Kein eigener Produkttest, keine Livepreis- oder Verfügbarkeitsbehauptung und keine geprüften Einzelprodukt-Kaufbuttons. Die Produktkarten enthalten als Werbung gekennzeichnete Amazon-Suchlinks.</div><h4>Was bei der Auswahl wirklich zählt</h4><p>Im Weihnachtsgeschäft fällt die Auswahl durch besonders viele Werbeaktionen oft schwer. Statt sich von durchgestrichenen Preisen leiten zu lassen, hilft eine einfache Ausgangsfrage: Welche Alltagssituation soll das Geschenk verbessern? Ein Küchenhelfer eignet sich nur, wenn er zur Küche, den Essgewohnheiten und dem vorhandenen Platz passt.</p><p>Bei Technikprodukten sind Kompatibilität und Einrichtung wichtig. Zubehör kann von Anschlüssen, Betriebssystemen oder anderen Geräten abhängig sein. Für Menschen, die wenig Zeit oder Geduld für technische Einrichtung haben, sollte die Benutzbarkeit ein wichtigeres Kriterium sein als die Zahl der Funktionen.</p><p>Ein vermeintliches Schnäppchen ist nicht automatisch ein gutes Geschenk. Rückgabeoptionen, Garantie, benötigte Verbrauchsmaterialien und Folgekosten verdienen genauso viel Aufmerksamkeit wie die Anschaffung. Besonders bei größeren Geräten lohnt es sich, Maße und Gewicht vor dem Kauf zu überprüfen.</p><p>FundFux verwendet vor einer rechtmäßigen aktuellen Angebotsprüfung weder behauptete UVP-Ersparnisse noch künstliche Verknappung. Eine sachliche Produktauswahl kann trotzdem nützlich sein: Sie hilft, unterschiedliche Bedürfnisse einzugrenzen und gezielter nach einem passenden Angebot zu suchen.</p><section class="details"><h4>Vor dem Kauf überprüfen</h4><ul><li>Bedürfnis und Alltag der beschenkten Person</li><li>Kompatibilität und Größe</li><li>Folgekosten und Bedienbarkeit</li><li>Rückgabe und Nachkauf von Zubehör</li></ul></section><h4>Häufige Frage</h4><p><strong>Sind saisonale Sonderangebote automatisch günstiger?</strong></p><p>Nein. Ein Rabattvergleich muss sich auf belastbare, zeitlich passende Referenzpreise stützen.</p><p class="muted">Weiterführende Informationen: <a href="https://partnernet.amazon.de/help/operating/policies" target="_blank" rel="noopener noreferrer">Offizielle Hersteller- oder Programminformationen</a>. Diese Kaufhilfe ist eine eigene redaktionelle Einordnung, kein Vergleichstest.</p><p class="fine"><a href="#ratgeber-uebersicht">Zur Ratgeberübersicht</a></p></article>
 <article class="guide" id="ratgeber-8"><div class="eyebrow">FundFux-Ratgeber 08 · 2. November 2026</div><h3>Woran erkenne ich transparente Affiliate-Werbung?</h3><p><strong>Herstellerdaten, persönliche Tests und Händlerangebote klar auseinanderhalten.</strong></p><div class="notice"><strong>Unabhängige Kaufhilfe:</strong> Kein eigener Produkttest, keine Livepreis- oder Verfügbarkeitsbehauptung und keine geprüften Einzelprodukt-Kaufbuttons. Die Produktkarten enthalten als Werbung gekennzeichnete Amazon-Suchlinks.</div><h4>Was bei der Auswahl wirklich zählt</h4><p>Affiliate-Werbung kann für Leserinnen und Leser nützlich sein, wenn klar ist, weshalb ein Produkt erwähnt wird und worauf sich die Aussagen stützen. Problematisch wird sie, wenn ein Text wie ein persönlicher Erfahrungsbericht klingt, obwohl das Gerät nie getestet wurde. FundFux unterscheidet deshalb Herstellerangaben, allgemeine Kaufhinweise und echte eigene Nutzung ausdrücklich.</p><p>Auch die Werbekennzeichnung muss verständlich sein. Bei einer kommerziell motivierten Produktvorstellung sollte auf den ersten Blick erkennbar sein, dass ein wirtschaftliches Interesse besteht. Ein versteckter Hinweis am Ende einer langen Seite genügt nicht immer. Amazon verlangt zudem eine besondere Partnererklärung in seinem Programm.</p><p>Ein seriöser Beitrag nennt das genaue Modell und erläutert, welche Informationen noch fehlen. Dazu gehören unter Umständen Lieferumfang, Produktgeneration oder Händlerdaten. Ein Herstellerfoto ist nicht automatisch frei verwendbar, nur weil es im Internet auffindbar ist. Für kommerzielle Social-Media-Videos sind die Nutzungsrechte gesondert zu prüfen.</p><p>Schließlich sollten Preis, Lagerbestand und Rabatte vorsichtig behandelt werden. Diese Daten können sich laufend ändern. Ohne aktuelle zulässige Bezugsquelle ist ein dauerhafter Ratgeber mit Kaufkriterien oft ehrlicher als eine angeblich tagesaktuelle Preisliste.</p><section class="details"><h4>Vor dem Kauf überprüfen</h4><ul><li>Werbehinweis deutlich sichtbar?</li><li>Eigene Tests klar von Herstellerangaben getrennt?</li><li>Produktmodell und Quellen nachvollziehbar?</li><li>Bildrechte und Linkziele geprüft?</li></ul></section><h4>Häufige Frage</h4><p><strong>Darf eine Affiliate-Seite eigene Meinung enthalten?</strong></p><p>Ja, wenn die Bewertung als Meinung erkennbar ist und keine nicht durchgeführten Tests vorgespiegelt werden.</p><p class="muted">Weiterführende Informationen: <a href="https://partnernet.amazon.de/help/operating/policies" target="_blank" rel="noopener noreferrer">Offizielle Hersteller- oder Programminformationen</a>. Diese Kaufhilfe ist eine eigene redaktionelle Einordnung, kein Vergleichstest.</p><p class="fine"><a href="#ratgeber-uebersicht">Zur Ratgeberübersicht</a></p></article>
 <article class="guide" id="ratgeber-9"><div class="eyebrow">FundFux-Ratgeber 09 · 2. November 2026</div><h3>USB-C-Kabel: Stecker gleich – Leistung unterschiedlich</h3><p><strong>Wichtige Kabelmerkmale werden häufig miteinander verwechselt.</strong></p><div class="notice"><strong>Unabhängige Kaufhilfe:</strong> Kein eigener Produkttest, keine Livepreis- oder Verfügbarkeitsbehauptung und keine geprüften Einzelprodukt-Kaufbuttons. Die Produktkarten enthalten als Werbung gekennzeichnete Amazon-Suchlinks.</div><h4>Was bei der Auswahl wirklich zählt</h4><p>USB-C beschreibt zunächst die Form eines Anschlusses. Daraus folgt weder eine bestimmte Ladegeschwindigkeit noch eine garantierte Datenübertragungsrate. Wer ein Kabel auswählt, sollte daher zuerst den Zweck festlegen: Soll nur ein Gerät geladen, sollen Daten übertragen oder soll ein Bildschirm angeschlossen werden?</p><p>Beim Laden müssen Kabel, Netzteil und Endgerät zusammenpassen. Eine aufgedruckte maximale Wattzahl bedeutet nicht, dass jedes angeschlossene Gerät diese Leistung tatsächlich nutzt. In der Praxis begrenzen die beteiligten Komponenten gemeinsam die Leistung. Auch die Länge des Kabels kann im Alltag relevant sein.</p><p>Für die Datenübertragung spielen unterstützte Standards eine wichtige Rolle. Kabel, die äußerlich nahezu identisch aussehen, können sich in den elektrischen Fähigkeiten unterscheiden. Besonders für große Dateien oder externe Monitore sollten technische Angaben ausdrücklich überprüft werden.</p><p>Bei sehr billigen oder unbekannten Produkten ist es sinnvoll, auf nachvollziehbare Herstellerinformationen, verständliche Kennzeichnungen und seriöse Händler zu achten. Ein Produktfoto allein kann nicht belegen, ob die versprochenen technischen Eigenschaften tatsächlich unterstützt werden.</p><section class="details"><h4>Vor dem Kauf überprüfen</h4><ul><li>Laden, Daten oder Bildsignal – welcher Einsatzzweck?</li><li>Unterstützte Leistung aller Geräte</li><li>Kabellänge und mechanische Belastbarkeit</li><li>Konkrete technische Standards statt nur USB-C-Aufdruck</li></ul></section><h4>Häufige Frage</h4><p><strong>Kann jedes USB-C-Kabel einen Monitor verbinden?</strong></p><p>Nein. Das hängt von Kabel, Geräten und unterstützten Übertragungsmodi ab.</p><p class="muted">Weiterführende Informationen: <a href="https://www.usb.org/" target="_blank" rel="noopener noreferrer">Offizielle Hersteller- oder Programminformationen</a>. Diese Kaufhilfe ist eine eigene redaktionelle Einordnung, kein Vergleichstest.</p><p class="fine"><a href="#ratgeber-uebersicht">Zur Ratgeberübersicht</a></p></article>
-<article class="guide" id="ratgeber-10"><div class="eyebrow">FundFux-Ratgeber 10 · 2. November 2026</div><h3>Preise prüfen ohne falsche Angebote</h3><p><strong>Eine faire Kaufhilfe trennt dauerhafte Merkmale von flüchtigen Angebotsdaten.</strong></p><div class="notice"><strong>Unabhängige Kaufhilfe:</strong> Kein eigener Produkttest, keine Livepreis- oder Verfügbarkeitsbehauptung und keine geprüften Einzelprodukt-Kaufbuttons. Die Produktkarten enthalten als Werbung gekennzeichnete Amazon-Suchlinks.</div><h4>Was bei der Auswahl wirklich zählt</h4><p>Produkteigenschaften ändern sich meist langsamer als Angebotspreise. Ein Ratgeber über Bedienung, Größe oder Kompatibilität kann länger hilfreich sein, während ein Preis bereits Minuten später überholt ist. Deshalb sollten beide Informationstypen auf einer Affiliate-Seite deutlich getrennt bleiben.</p><p>Besonders vorsichtig sollte man bei Rabattangaben sein. Ein durchgestrichener Preis ist nicht automatisch ein verlässlicher Hinweis auf den günstigsten Marktpreis. Wer Preisvergleiche macht, muss wissen, welche Ausgangswerte verwendet wurden und ob das konkrete Modell identisch ist. Unterschiedliche Zubehörsets oder Lieferumfänge machen einen einfachen Vergleich schnell irreführend.</p><p>Neben dem Preis ist der Händler entscheidend. Ein Angebot kann durch einen Drittanbieter verkauft und trotzdem von Amazon versendet werden. Wer ausschließlich Direktangebote wünscht, sollte beides einzeln kontrollieren. Auch der Zustand – neu, generalüberholt oder gebraucht – gehört in eine seriöse Darstellung.</p><p>FundFux verzichtet bewusst auf nicht nachweisbare Livebestände und Kaufdruck. Erst wenn eine zulässige aktuelle Datenquelle und der genaue Partnerlink vorliegen, kann eine Produktseite mit konkretem Verkaufsangebot ergänzt werden. Bis dahin bleiben die Texte Kaufhilfe statt einer behaupteten Angebotsübersicht.</p><section class="details"><h4>Vor dem Kauf überprüfen</h4><ul><li>Ist die genaue Variante identisch?</li><li>Ist der Ausgangspreis belegt und aktuell?</li><li>Wer verkauft und wer versendet?</li><li>Ist die angegebene Verfügbarkeit tatsächlich verifiziert?</li></ul></section><h4>Häufige Frage</h4><p><strong>Kann ein alter Link trotz richtigem Produkt später auf einen anderen Händler führen?</strong></p><p>Ja, die konkret hervorgehobene Angebotssituation kann sich ändern. Deshalb sollte sie regelmäßig überprüft werden.</p><p class="muted">Weiterführende Informationen: <a href="https://partnernet.amazon.de/help/operating/policies" target="_blank" rel="noopener noreferrer">Offizielle Hersteller- oder Programminformationen</a>. Diese Kaufhilfe ist eine eigene redaktionelle Einordnung, kein Vergleichstest.</p><p class="fine"><a href="#ratgeber-uebersicht">Zur Ratgeberübersicht</a></p></article></section><section class="section" id="kontakt"><div class="section-topline">04 / CONNECTION</div><h2>Kontakt zu FundFux</h2><div class="contact-grid">
+<article class="guide" id="ratgeber-10"><div class="eyebrow">FundFux-Ratgeber 10 · 2. November 2026</div><h3>Preise prüfen ohne falsche Angebote</h3><p><strong>Eine faire Kaufhilfe trennt dauerhafte Merkmale von flüchtigen Angebotsdaten.</strong></p><div class="notice"><strong>Unabhängige Kaufhilfe:</strong> Kein eigener Produkttest, keine Livepreis- oder Verfügbarkeitsbehauptung und keine geprüften Einzelprodukt-Kaufbuttons. Die Produktkarten enthalten als Werbung gekennzeichnete Amazon-Suchlinks.</div><h4>Was bei der Auswahl wirklich zählt</h4><p>Produkteigenschaften ändern sich meist langsamer als Angebotspreise. Ein Ratgeber über Bedienung, Größe oder Kompatibilität kann länger hilfreich sein, während ein Preis bereits Minuten später überholt ist. Deshalb sollten beide Informationstypen auf einer Affiliate-Seite deutlich getrennt bleiben.</p><p>Besonders vorsichtig sollte man bei Rabattangaben sein. Ein durchgestrichener Preis ist nicht automatisch ein verlässlicher Hinweis auf den günstigsten Marktpreis. Wer Preisvergleiche macht, muss wissen, welche Ausgangswerte verwendet wurden und ob das konkrete Modell identisch ist. Unterschiedliche Zubehörsets oder Lieferumfänge machen einen einfachen Vergleich schnell irreführend.</p><p>Neben dem Preis ist der Händler entscheidend. Ein Angebot kann durch einen Drittanbieter verkauft und trotzdem von Amazon versendet werden. Wer ausschließlich Direktangebote wünscht, sollte beides einzeln kontrollieren. Auch der Zustand – neu, generalüberholt oder gebraucht – gehört in eine seriöse Darstellung.</p><p>FundFux verzichtet bewusst auf nicht nachweisbare Livebestände und Kaufdruck. Erst wenn eine zulässige aktuelle Datenquelle und der genaue Partnerlink vorliegen, kann eine Produktseite mit konkretem Verkaufsangebot ergänzt werden. Bis dahin bleiben die Texte Kaufhilfe statt einer behaupteten Angebotsübersicht.</p><section class="details"><h4>Vor dem Kauf überprüfen</h4><ul><li>Ist die genaue Variante identisch?</li><li>Ist der Ausgangspreis belegt und aktuell?</li><li>Wer verkauft und wer versendet?</li><li>Ist die angegebene Verfügbarkeit tatsächlich verifiziert?</li></ul></section><h4>Häufige Frage</h4><p><strong>Kann ein alter Link trotz richtigem Produkt später auf einen anderen Händler führen?</strong></p><p>Ja, die konkret hervorgehobene Angebotssituation kann sich ändern. Deshalb sollte sie regelmäßig überprüft werden.</p><p class="muted">Weiterführende Informationen: <a href="https://partnernet.amazon.de/help/operating/policies" target="_blank" rel="noopener noreferrer">Offizielle Hersteller- oder Programminformationen</a>. Diese Kaufhilfe ist eine eigene redaktionelle Einordnung, kein Vergleichstest.</p><p class="fine"><a href="#ratgeber-uebersicht">Zur Ratgeberübersicht</a></p></article></section><section class="ff-future-stage" id="future-mission" aria-labelledby="ff-future-main">
+<div class="ff-future-inner"><div class="ff-future-head"><div>
+<div class="ff-future-eyebrow">FUNDFUX // FUTURE CONTROL // 2026</div>
+<h2 id="ff-future-main">Dein nächster Kauf.<br><span>Ein Level weiter.</span></h2>
+<p>Gaming, Amazon Basics, Geschenkideen und Mode. Nicht irgendeinen Rabatt jagen, sondern zuerst prüfen, was wirklich passt. Willkommen in der neuen FundFux-Produktwelt.</p>
+<div class="ff-future-buttons"><a href="#shop">Jetzt Produkte entdecken ↗</a>
+<a href="#angebote">Angebotsstatus prüfen ↗</a></div></div>
+<div class="ff-future-visual" aria-hidden="true">
+<div class="ff-future-orbit"></div><div class="ff-future-orbit"></div><div class="ff-future-orbit"></div>
+<div class="ff-future-holo">🦊</div><div class="ff-future-holo-label">FUNDFUX SYSTEM ONLINE</div>
+</div></div><div class="ff-future-line"></div>
+<div class="ff-future-subtitle"><h3>Wähle deine Produktwelt</h3><p>Vier Themen, ein Ziel: cleverer kaufen.</p></div>
+<div class="ff-future-tiles">
+<a class="ff-future-tile" href="#shop-basics"><img src="/assets/fundfux/shop/basics_themenfoto.jpg" loading="lazy" alt="Echtes Haushalts-Themenfoto, nicht ein bestimmtes Amazon-Basics-Produkt">
+<span>01 / EVERYDAY TECH</span><strong>Amazon Basics <b>↗</b></strong></a>
+<a class="ff-future-tile" href="#shop-mode"><img src="/assets/fundfux/shop/mode_foto_pexels.jpg" loading="lazy" alt="Echtes Fashion-Themenfoto">
+<span>02 / STYLE LAB</span><strong>Mode &amp; Style <b>↗</b></strong></a>
+<a class="ff-future-tile" href="#shop-gaming"><img src="/assets/fundfux/shop/gaming_themenfoto.jpg" loading="lazy" alt="Echtes Gaming-Themenfoto">
+<span>03 / GAME MODE</span><strong>Gaming &amp; Technik <b>↗</b></strong></a>
+<a class="ff-future-tile" href="#shop-weihnachten"><img src="/assets/fundfux/shop/weihnachten_themenfoto.jpg" loading="lazy" alt="Echtes Geschenk-Themenfoto">
+<span>04 / GIFT UNIVERSE</span><strong>Geschenkideen <b>↗</b></strong></a>
+</div>
+<div class="ff-future-steps"><div class="ff-future-step"><em>01 // ENTDECKEN</em><b>Ideen finden</b><p>Keine künstlichen Bestseller oder erfundenen Angebote.</p></div>
+<div class="ff-future-step"><em>02 // VERGLEICHEN</em><b>Details prüfen</b><p>Modell, Kompatibilität und Lieferumfang statt Werbe-Hype.</p></div>
+<div class="ff-future-step"><em>03 // WEITERLEITEN</em><b>Bei Amazon ansehen</b><p>Preis, Verkäufer und Verfügbarkeit immer dort bestätigen.</p></div></div>
+<p class="ff-future-fine">Werbung: FundFux verwendet gekennzeichnete Amazon-Partnerlinks. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen. Themenbilder zeigen nicht automatisch das verlinkte Einzelprodukt.</p>
+</div></section><section class="section" id="kontakt"><div class="section-topline">04 / CONNECTION</div><h2>Kontakt zu FundFux</h2><div class="contact-grid">
 <div class="legal-card"><h3>Schreib uns</h3><p>Hast du eine Frage zu einer Produktvorstellung oder einen Hinweis zu einem Ratgeber? Du erreichst uns per E-Mail oder über das Formular.</p><p><strong>E-Mail:</strong> <a href="mailto:c.daniel.werner@gmail.com">c.daniel.werner@gmail.com</a></p><p>Bitte keine Passwörter, Zahlungsdaten oder sensiblen Gesundheitsinformationen einsenden.</p></div>
 <div class="contact-card"><form method="POST" action="https://formsubmit.co/c8317ffc02791cfd588fb18ebcac32b9">
 <input type="hidden" name="_subject" value="FundFux Website-Kontaktanfrage">
@@ -1193,7 +1312,20 @@ html{scroll-padding-top:15px}
 <p>Diese statische Website bindet derzeit keine eigenen Analyse- oder Werbepixel, externen Schriftbibliotheken oder automatisch geladenen Video-Player ein. Einwilligungsbedürftige Tracking-Techniken werden nicht eingesetzt. Technisch notwendige Maßnahmen durch aufgerufene Drittanbieter können erst beim Wechsel auf deren Websites stattfinden.</p>
 <h3>7. Betroffenenrechte</h3>
 <p>Dir können nach der DSGVO insbesondere Rechte auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21) zustehen. Du kannst dich an die oben angegebene E-Mail-Adresse wenden. Zudem besteht das Beschwerderecht bei einer Datenschutzaufsichtsbehörde (Art. 77 DSGVO), etwa beim Landesbeauftragten für den Datenschutz und die Informationsfreiheit Rheinland-Pfalz.</p>
-</div></section></main><footer><div class="shell"><strong>🦊 FundFux – Clever finden. Besser kaufen.</strong>
-<p>Als Amazon-Partner verdiene ich an qualifizierten Verkäufen. Produkttexte sind keine Eigentests, sofern sie nicht ausdrücklich so bezeichnet werden.</p>
-<a href="#start">Nach oben</a> · <a href="#impressum">Impressum</a> · <a href="#datenschutz">Datenschutz</a> · <a href="#kontakt">Kontakt</a> · <a href="https://www.instagram.com/fundfux/" target="_blank" rel="noopener noreferrer">Instagram</a> · <a href="https://www.youtube.com/@FundFux" target="_blank" rel="noopener noreferrer">YouTube</a>
-</div></footer></body></html>
+</div></section></main><footer class="ff-next-footer" aria-label="FundFux Links und rechtliche Angaben">
+<div class="ff-footer-grid">
+<div class="ff-footer-brand"><strong>🦊 Fund<span>Fux.</span></strong><p>Clever finden. Besser kaufen. Echte Kaufhilfe, erkennbare Werbung und kein erfundener Deal.</p>
+<p>Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.</p></div>
+<div><h3>Produktwelten</h3><nav class="ff-footer-links" aria-label="FundFux Produktwelten">
+<a href="#shop-basics">Amazon Basics</a><a href="#shop-mode">Mode &amp; Accessoires</a>
+<a href="#shop-gaming">Gaming &amp; Technik</a><a href="#shop-weihnachten">Geschenkideen</a>
+<a href="#ratgeber-uebersicht">Kaufberater</a></nav></div>
+<div><h3>FundFux verbinden</h3><nav class="ff-footer-links" aria-label="FundFux Kontakt und Social Media">
+<a href="https://www.instagram.com/fundfux/" target="_blank" rel="noopener noreferrer">Instagram</a>
+<a href="https://www.youtube.com/@FundFux" target="_blank" rel="noopener noreferrer">YouTube</a>
+<a href="#kontakt">Kontaktformular</a><a href="#impressum">Impressum</a>
+<a href="#datenschutz">Datenschutzhinweise</a></nav></div>
+</div><div class="ff-footer-bottom">
+<span>© FundFux · 2026 · Redaktionelle Produktvorstellungen, kein eigener Warenverkauf</span>
+<span><a href="#start">↑ Nach oben</a> · <a href="#angebote">Angebotsradar</a></span></div>
+</footer></body></html>
